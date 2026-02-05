@@ -52,14 +52,37 @@
 //     console.log('Both win the trophy')
 // }
 
-const scoreDolphins = (96 + 108 + 89) / 3;
-const scoreKoalas = (88 + 91 + 110) / 3;
-console.log(scoreDolphins, scoreKoalas);
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas);
  
-if (scoreDolphins > scoreKoalas) {
-  console.log('Dolphins win the trophy');
-} else if (scoreKoalas > scoreDolphins) {
-  console.log('Koalas win the trophy');
+// if (scoreDolphins > scoreKoalas) {
+//   console.log('Dolphins win the trophy');
+// } else if (scoreKoalas > scoreDolphins) {
+//   console.log('Koalas win the trophy');
+// } else {
+//   console.log('Both win the trophy');
+// }
+
+// const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+
+
+// if (numNeighbours === 1) {
+//   console.log("Only 1 border!");
+// } else if (numNeighbours > 1) {
+//   console.log("More than 1 border");
+// } else {
+//   console.log("No borders");
+// }
+
+const country = prompt("Enter your prefarable country name: ");
+const language = prompt("Enter your preferable language: ");
+const population = Number(prompt("Enter population "));
+const noIsland = false;
+
+
+if (language === "english" && population < 50 && !noIsland) {
+  console.log(`You should live in ${country} :)`);
 } else {
-  console.log('Both win the trophy');
+  console.log(`${country} does not meet your criteria :(`)
 }
