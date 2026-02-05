@@ -75,14 +75,155 @@
 //   console.log("No borders");
 // }
 
-const country = prompt("Enter your prefarable country name: ");
-const language = prompt("Enter your preferable language: ");
-const population = Number(prompt("Enter population "));
-const noIsland = false;
+// const country = prompt("Enter your prefarable country name: ");
+// const language = prompt("Enter your preferable language: ");
+// const population = Number(prompt("Enter population "));
+// const noIsland = false;
 
 
-if (language === "english" && population < 50 && !noIsland) {
-  console.log(`You should live in ${country} :)`);
-} else {
-  console.log(`${country} does not meet your criteria :(`)
+// if (language === "english" && population < 50 && !noIsland) {
+//   console.log(`You should live in ${country} :)`);
+// } else {
+//   console.log(`${country} does not meet your criteria :(`)
+// }
+
+
+
+
+// const day = prompt("Enter a day");
+
+// if (day === "monday") {
+//   console.log("Plan course structure");
+//   console.log("Go to coding meetup");
+// } else if (day === "tuesday") {
+//   console.log("Prepare theory videos");
+// } else if (day === "wednesday" || day === "thursday") {
+//   console.log("Write code examples");
+// } else if (day === "friday") {
+//   console.log("Record videos");
+// } else if (day === "saturday" || day === "sunday") {
+//   console.log("Enjoy the weekend :D");
+// } else {
+//   console.log("Not a valid day!");
+
+
+
+// const language = prompt("Enter a language: ");
+
+
+// switch (language) {
+//   case "chinese":
+//   case "mandarin":
+//     console.log('MOST number of native speakers!');
+//     break;
+//   case "spanish":
+//     console.log('2nd place in number of native speakers');
+//     break;
+//   case "english":
+//     console.log("3rd place");
+//     break;
+//   case "hindi":
+//     console.log('Number 4');
+//     break;
+//   case "arabic":
+//     console.log("5th most spoken language");
+//     break;
+//   default:
+//     console.log("Great language too :D");
+// }
+
+let day;
+
+switch (new Date().getDay()) { //getDay() method returns the weekday as a number between 0 and 6.  Exam: (sun=0,mon=1,tues=2)
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thurday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+  default:
+    day = "Invalid";
 }
+
+// console.log(day);
+
+
+let txt;
+switch (new Date().getDay()) {
+  case 6:
+    txt = "Today is Saturday";
+    break;
+  case 0:
+    txt = "Today is Sunday";
+    break;
+  default:
+    txt = "Looking forward to the Weekend";
+}
+
+// console.log(txt);
+
+let txt1;
+
+switch (new Date().getDay()) {
+  default:
+    txt1 = "Looking forward to the Weekend";
+    break;
+  case 6:
+    txt1 = "Today is Saturday";
+    break;
+  case 0:
+    txt1 = "Today is Sunday";
+}
+// console.log(txt1)
+
+
+let x;
+
+switch (new Date().getDay()) {
+  case 4:
+  case 5:
+    x = "Soon it is Weekend";
+    break;
+  case 0:
+  case 6:
+    x = "It is Weekend";
+  default:
+    x = "Looking forward to the Weekend";
+}
+console.log(x);
+
+
+
+// const country = "Bangladesh";
+// const population = 60;
+
+
+// console.log(`${country}'s population is ${population > 33 ? `${country}'s above` : 'below'} average`)
+
+
+// const age = 8;
+
+// const drive = age >= 18 ? `I'd like to drive a car` : `You couldn't drive`;
+// console.log(drive);
+
+
+// const number = 3;
+
+// const value = number % 2 === 0 ? `Even` : `Odd`;
+// console.log(value);
+
