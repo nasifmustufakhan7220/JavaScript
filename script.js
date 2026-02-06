@@ -205,25 +205,45 @@ switch (new Date().getDay()) {
   default:
     x = "Looking forward to the Weekend";
 }
-console.log(x);
+// console.log(x);
 
 
+const age = 16;
+const text = (age < 18) ? "Minor" : "Adult";
 
-// const country = "Bangladesh";
-// const population = 60;
+// console.log(text);
 
-
-// console.log(`${country}'s population is ${population > 33 ? `${country}'s above` : 'below'} average`)
-
-
-// const age = 8;
-
-// const drive = age >= 18 ? `I'd like to drive a car` : `You couldn't drive`;
-// console.log(drive);
+const isMember = false;
+const discount = !isMember ? 0.2 : 0;
+// console.log(discount);
 
 
-// const number = 3;
+const population = 30;
 
-// const value = number % 2 === 0 ? `Even` : `Odd`;
-// console.log(value);
+const country = "Bangaldesh";
+
+const averagePopulation = `${country}'s population is ${population > 33 ? 'above' : 'below'} average`;
+
+// console.log(averagePopulation);
+
+
+// const bill = 430;
+// const tip1 = bill * (15 / 100);
+// const tip2 = bill * (20 / 100);
+
+// /* Write your code below. Good luck! 🙂 */
+
+// const tip = `The bill was ${bill}, the tip was ${bill >= 50 && bill <= 300 ? Number(tip1) : Number(tip2)}, and the total value ${(bill >= 50 && bill <= 300) ? tip1 + bill : tip2 + bill}`;
+
+// console.log(tip);
+
+const bill = Number(prompt("Enter a bill: "));
+
+
+const tipFunc = (bill) => {
+  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  return tip;
+}
+
+// console.log(`The bill was ${bill}, the tip was ${tipFunc(bill)}, and the total value ${bill + tipFunc(bill)}`);
 
