@@ -247,3 +247,6 @@ const tipFunc = (bill) => {
 
 // console.log(`The bill was ${bill}, the tip was ${tipFunc(bill)}, and the total value ${bill + tipFunc(bill)}`);
 
+
+
+
