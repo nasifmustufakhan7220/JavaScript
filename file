@@ -1,0 +1,24 @@
+- Not every function needs a return.
+- Use return when you want the function to give back a value that can be stored or reused.
+- Skip return when the function’s job is just to do something (like printing, updating, or triggering an action).
+
+
+function greet(name) {
+  return "Hello, " + name;  // action only
+}
+
+// greet("Nasif");   // prints "Hello, Nasif"
+console.log(greet("Nasif"));
+
+
+
+
+
+
+
+
+
+
+When would using a switch statement be more appropriate than an if/else statement?
+
+=> When comparing a single value against multiple possible values.
