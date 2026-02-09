@@ -249,18 +249,92 @@ const age = '18';
 // if (age === 18) console.log("You just became an adult (strict operator)");
 // if (age == 18) console.log("You just became an adult (loose oprator)");
 
-const favourite = Number(prompt("What's your favourite number ?"));
-console.log(favourite);
-console.log(typeof favourite);
+// const favourite = Number(prompt("What's your favourite number ?"));
+// console.log(favourite);
+// console.log(typeof favourite);
 
-if (favourite === 23) {
-    console.log('Cool! 23 is an amazing number!');
-} else if (favourite === 7) {
-    console.log('Cool! 7 is also an amazing number!');
-} else if (favourite === 9) {
-    console.log('Cool! 9 is an amazing number!');
-} else if (favourite == 10) {
-    console.log('Cool! 10 is an amazing number and also used as a looose oparator!');
-} else {
-     console.log('Number is not 23 or 7 or 9 or 10');
-}
+// if (favourite === 23) {
+//     console.log('Cool! 23 is an amazing number!');
+// } else if (favourite === 7) {
+//     console.log('Cool! 7 is also an amazing number!');
+// } else if (favourite === 9) {
+//     console.log('Cool! 9 is an amazing number!');
+// } else if (favourite == 10) {
+//     console.log('Cool! 10 is an amazing number and also used as a looose oparator!');
+// } else {
+//      console.log('Number is not 23 or 7 or 9 or 10');
+// }
+
+
+// if (favourite !== 23) {
+//     console.log('Why not 23?');
+// }
+
+
+// Logical Operators
+
+// const hasDriversLicense = true;
+// const hasGoodVision = false;
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+
+// if (hasDriversLicense && !hasGoodVision) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+// const DolphinsScore = (97 + 112 + 101) / 3;
+// console.log(DolphinsScore);
+// const KoalasScore = (109 + 95 + 106) / 3;
+// console.log(KoalasScore);
+
+// if (DolphinsScore > KoalasScore && DolphinsScore >= 100) {
+//     console.log('Dolpins wins the match');
+// } else if (DolphinsScore < KoalasScore && KoalasScore >= 100) {
+//     console.log('Koalas wins the match');
+// } else if (DolphinsScore === KoalasScore && DolphinsScore && KoalasScore >= 100) {
+//     console.log("Both wins the match")
+// } else {
+//     console.log("No ones win the match");
+// }
+
+
+
+// const day = 'monday';
+
+// switch (day) {
+//     case 'monday':
+//         console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thrusday':
+//         console.log('Write code examples');
+//         break;
+//     case 'friday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('Enjoy the weekend~');
+//         break;
+//     default:
+//         console.log('Not a valid day!');
+// }
+
+
+const bill = 309;
+const totalBill = (bill >= 50 && bill <= 300) ? (bill * 0.15) : (bill * 0.2);
+console.log(bill);
+
+
+const tip = `The bill was ${bill}, the tip was ${totalBill.toFixed(2)} and the total value ${bill + totalBill}`
+
+console.log(tip);
