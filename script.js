@@ -377,3 +377,49 @@ const tipFunc = (bill) => {
 // console.log(mark);
 
 
+// const userName = prompt("Enter your user name: ");
+// const userPassword = prompt("Enter your password: ");
+
+// const login = function (name, password) {
+//   if (name === 'admin' && password === '12345') {
+//     return `Login Successful`;
+//   } else if (name !== 'admin' && password !== '12345'){
+//     return `Username and password are incorrect`;
+//   }else if (name !== 'admin') {
+//     return `Incorrect username`;
+//   } else if (password !== '12345') {
+//     return `Incorrect password`;
+//   } else {
+//     return `Invalid input`;
+//   }
+// };
+
+
+// let authLogin = login(userName,userPassword);
+
+// console.log(authLogin);
+
+
+//JavaScript test() method.
+
+const password = prompt("Enter your password: ");
+
+const regexPattern = /^[A-Za-z0-9]+$/;
+
+const pass = function (password, regx) {
+  if (password.toString().length < 1) {
+    return `Invalid`;
+  }
+  else if (password.toString().length < 6) {
+    return `Weak password`;
+  } else if (password.toString().length <= 7) {
+    return `Medium password`;
+  } else if (password.toString().length >= 8 && regx.test(password)) {
+    return `Strong password`;
+  } else {
+    return `Sweet`;
+  }
+}
+
+let passCheck = pass(password, regexPattern);
+console.log(passCheck);
