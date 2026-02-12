@@ -237,7 +237,7 @@ const averagePopulation = `${country}'s population is ${population > 33 ? 'above
 
 // console.log(tip);
 
-const bill = Number(prompt("Enter a bill: "));
+// const bill = Number(prompt("Enter a bill: "));
 
 
 const tipFunc = (bill) => {
@@ -286,4 +286,94 @@ const tipFunc = (bill) => {
 // } else {
 //     countDown(number);
 // }
+
+
+
+
+// const userAge = Number(prompt("Enter you'r age: "));
+
+
+// const ageCal = (userAge) => {
+//   if (isNaN(userAge)) {
+//   return `${userAge} your age category is Invalid`;
+// } else if (userAge < 0) {
+//   return `${userAge} your age category is Invalid`;
+// } else if (userAge >= 0 && userAge <= 12) {
+//   return `${userAge} your age category is a child`;
+// } else if (userAge >= 13 && userAge <= 19) {
+//   return `${userAge} your age category is Teenager`;
+// } else if (userAge >= 20 && userAge <= 59) {
+//   return `${userAge} your age category is Adult`;
+// } else {
+//   return `${userAge} your age category is Senior`;
+// }
+// }
+
+// const Age = ageCal(userAge);
+// console.log(Age);
+
+
+
+// const score = Number(prompt("Enter your score from 0 to 100. "));
+
+// let grade;
+
+
+// const passFail = (grades) => {
+//   let status = '';
+
+//   if (grades >= 60) {
+//     return `${status = 'Pass'}`;
+//   } else {
+//     return `${status = 'Fail'}`
+//   }
+// }
+
+
+// const gradeCal = (score) => {
+
+//   if (isNaN(score)) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'Invalid'}
+//     Status : Your score is Invalid make sure you press numbers not strings.`;
+//   }
+//   else if (score < 0 || score > 101) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'Invalid'}
+//     Status : Invalid status`
+//   } else if (score >= 90 && score <= 100) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'A'}
+//     Status : ${passFail(score)}`
+//   } else if (score >= 80 && score <= 89) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'B'}
+//     Status : ${passFail(score)}`
+//   } else if (score >= 70 && score <= 79) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'C'}
+//     Status : ${passFail(score)}`
+//   } else if (score >= 60 && score <= 69) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'D'}
+//     Status : ${passFail(score)}`
+//   } else if (score >= 0 && score <= 59) {
+//     return `
+//     Score : ${score}
+//     Grade : ${grade = 'F'}
+//     Status : ${passFail(score)}`
+//   } else {
+//     return `Invalid score`;
+//   }
+// };
+
+// const mark = gradeCal(score);
+// console.log(mark);
+
 
