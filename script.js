@@ -402,24 +402,58 @@ const tipFunc = (bill) => {
 
 //JavaScript test() method.
 
-const password = prompt("Enter your password: ");
+// const password = prompt("Enter your password: ");
 
-const regexPattern = /^[A-Za-z0-9]+$/;
 
-const pass = function (password, regx) {
-  if (password.toString().length < 1) {
-    return `Invalid`;
+// const pass = function (password) {
+//   if (password.length < 1) {
+//     return `Invalid`;
+//   }
+//   else if (password.length < 6) {
+//     return `Weak password`;
+//   } else if (password.length <= 7 && !/[A-Za-z]/.test(password) && !/[0-9]/.test(password)) {
+//     return `Medium password`;
+//   } else if (password.length >= 8 && /[A-Za-z]/.test(password) && /[0-9]/.test(password)) {
+//     return `Strong password`;
+//   }else {
+//     return `Hacker maybe track your password`;
+//   }
+// }
+
+// let passCheck = pass(password);
+// console.log(passCheck);
+
+
+const number1 = Number(prompt("Enter first number: "));
+const oparator = prompt("Enter a oparator between +, -, *, / : ");
+const number2 = Number(prompt("Enter second number: "));
+
+
+const calculator = (num1, num2, op) => {
+  if (isNaN(num1) || isNaN(num2)) {
+          return `Invalid number input`;
+        }
+    switch (op) {
+      case '+':
+          return `The sum of the two numbers is ${num1 + num2}`;
+      case '-':
+        return `The subtraction of the two numbers is ${num1 - num2}`;
+      case '*':
+        return `The multiplication of the two numbers is ${num1 * num2}`;
+      case '/':
+          if (num2 === 0) {
+            return `Cannot divide by zero`
+          }
+        return `The division of the two numbers is ${num1 / num2}`;
+      case '%':
+        return `The reminder of the two number is ${num1 % num2}`;
+      default:
+        return `Invalid Oparetor`;
+      
+      
   }
-  else if (password.toString().length < 6) {
-    return `Weak password`;
-  } else if (password.toString().length <= 7) {
-    return `Medium password`;
-  } else if (password.toString().length >= 8 && regx.test(password)) {
-    return `Strong password`;
-  } else {
-    return `Sweet`;
-  }
+  
 }
 
-let passCheck = pass(password, regexPattern);
-console.log(passCheck);
+const cal = calculator(number1, number2, oparator);
+console.log(cal);
