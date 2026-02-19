@@ -424,36 +424,108 @@ const tipFunc = (bill) => {
 // console.log(passCheck);
 
 
-const number1 = Number(prompt("Enter first number: "));
-const oparator = prompt("Enter a oparator between +, -, *, / : ");
-const number2 = Number(prompt("Enter second number: "));
+// const number1 = Number(prompt("Enter first number: "));
+// const oparator = prompt("Enter a oparator between +, -, *, / : ");
+// const number2 = Number(prompt("Enter second number: "));
 
 
-const calculator = (num1, num2, op) => {
-  if (isNaN(num1) || isNaN(num2)) {
-          return `Invalid number input`;
-        }
-    switch (op) {
-      case '+':
-          return `The sum of the two numbers is ${num1 + num2}`;
-      case '-':
-        return `The subtraction of the two numbers is ${num1 - num2}`;
-      case '*':
-        return `The multiplication of the two numbers is ${num1 * num2}`;
-      case '/':
-          if (num2 === 0) {
-            return `Cannot divide by zero`
-          }
-        return `The division of the two numbers is ${num1 / num2}`;
-      case '%':
-        return `The reminder of the two number is ${num1 % num2}`;
-      default:
-        return `Invalid Oparetor`;
+// const calculator = (num1, num2, op) => {
+//   if (isNaN(num1) || isNaN(num2)) {
+//           return `Invalid number input`;
+//         }
+//     switch (op) {
+//       case '+':
+//           return `The sum of the two numbers is ${num1 + num2}`;
+//       case '-':
+//         return `The subtraction of the two numbers is ${num1 - num2}`;
+//       case '*':
+//         return `The multiplication of the two numbers is ${num1 * num2}`;
+//       case '/':
+//           if (num2 === 0) {
+//             return `Cannot divide by zero`
+//           }
+//         return `The division of the two numbers is ${num1 / num2}`;
+//       case '%':
+//         return `The reminder of the two number is ${num1 % num2}`;
+//       default:
+//         return `Invalid Oparetor`;
       
       
-  }
+//   }
   
+// }
+
+// const cal = calculator(number1, number2, oparator);
+// console.log(cal);
+
+
+
+
+// Introduction of Arrays
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020);
+
+console.log(y[0]);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+// replacing one value in the array
+
+friends[2] = 'Jay';
+console.log(friends);
+
+const firstName = 'Jonas';
+const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+
+console.log(jonas);
+console.log(jonas[0]);
+console.log(jonas[1]);
+console.log(jonas[2]);
+console.log(jonas[3]);
+console.log(jonas[jonas.length - 1]);
+console.log(jonas[jonas.length - 1][0]);
+console.log(jonas[jonas.length - 1][1]);
+console.log(jonas[jonas.length - 1][2]);
+
+
+const calAge = function (brithYear) {
+  return 2037 - brithYear;
 }
 
-const cal = calculator(number1, number2, oparator);
-console.log(cal);
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calAge(years[0]);
+const age2 = calAge(years[1]);
+const age3 = calAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calAge(years[0]), calAge(years[1]), calAge(years[years.length - 1])];
+console.log(ages);
+console.log(ages.length);
+console.log(ages[ages.length - 3]);
+console.log(ages[ages.length - 2]);
+console.log(ages[ages.length - 1]);
+
+// Coverting an arrary to a String
+const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+const fru = fruits.toString();
+console.log(typeof fruits);
+console.log(typeof fru);
+
+// Looping Array Elements
+
+let fLen = fruits.length;
+let arr = "";
+console.log(fLen);
+
+for (let i = 0; i < fLen; i++){
+  arr += `${fruits[i]} \n`;
+};
+console.log(arr);
