@@ -514,6 +514,7 @@ console.log(ages[ages.length - 1]);
 
 // Coverting an arrary to a String
 const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.push("Lemon");
 
 const fru = fruits.toString();
 console.log(typeof fruits);
@@ -528,4 +529,30 @@ console.log(fLen);
 for (let i = 0; i < fLen; i++){
   arr += `${fruits[i]} \n`;
 };
+
 console.log(arr);
+
+const fruit = ['Banana', 'Orange', 'Apple', 'Mango'];
+let arr1 = [];
+
+for (let i = 0; i < fruit.length; i++){
+  arr1.push(fruit[i]);
+};
+
+console.log(arr1);
+
+
+
+const fu = ["WatterMalon", "Lemon", "Pine", "Cart"];
+
+let fur = "";
+
+fu.forEach(function (item, index) {
+  console.log(index + ": " + item);
+});
+
+
+
+
+
+
