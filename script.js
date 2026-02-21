@@ -545,14 +545,38 @@ console.log(arr1);
 
 const fu = ["WatterMalon", "Lemon", "Pine", "Cart"];
 
-let fur = "";
-
 fu.forEach(function (item, index) {
+  fu.push('YouGart')
   console.log(index + ": " + item);
 });
 
+console.log(fu);
 
 
+fruits[fruits.length] = "Pines";
+console.log(fruits);
 
+//In javaScript array always use numbered indexes.
 
+//Example
+const person = [];
+person[0] = "Jhon";
+person[1] = "Doe";
+person[2] = 46;
+console.log(person.length);
+console.log(person[0]);
 
+const points = new Array(40, 100, 1, 5, 25, 10);
+const points1 = [40, 100, 1, 5, 25, 10];
+console.log(points);
+console.log(points1);
+
+const ponits2 = new Array(40, 100, 1);
+const ponits3 = new Array(40, 100);
+const ponits4 = new Array(40);
+
+const points5 = [40];
+console.log(ponits2);
+console.log(ponits3);
+console.log(ponits4);
+console.log(points5);
