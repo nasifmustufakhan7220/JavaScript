@@ -14,7 +14,6 @@
 //     console.log("Why not 23")
 // }
 
-
 // const hasDriverLicense = true;
 // const hasGoodVision = true;
 
@@ -37,8 +36,6 @@
 //     console.log('Someone else should drive....');
 // }
 
-
-
 // const scoreDolphins = (96 + 108 + 89) / 3;
 // const scoreKoalas = (88 + 91 + 110) / 3;
 
@@ -55,7 +52,7 @@
 // const scoreDolphins = (96 + 108 + 89) / 3;
 // const scoreKoalas = (88 + 91 + 110) / 3;
 // console.log(scoreDolphins, scoreKoalas);
- 
+
 // if (scoreDolphins > scoreKoalas) {
 //   console.log('Dolphins win the trophy');
 // } else if (scoreKoalas > scoreDolphins) {
@@ -65,7 +62,6 @@
 // }
 
 // const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
-
 
 // if (numNeighbours === 1) {
 //   console.log("Only 1 border!");
@@ -80,15 +76,11 @@
 // const population = Number(prompt("Enter population "));
 // const noIsland = false;
 
-
 // if (language === "english" && population < 50 && !noIsland) {
 //   console.log(`You should live in ${country} :)`);
 // } else {
 //   console.log(`${country} does not meet your criteria :(`)
 // }
-
-
-
 
 // const day = prompt("Enter a day");
 
@@ -106,10 +98,7 @@
 // } else {
 //   console.log("Not a valid day!");
 
-
-
 // const language = prompt("Enter a language: ");
-
 
 // switch (language) {
 //   case "chinese":
@@ -134,7 +123,9 @@
 
 let day;
 
-switch (new Date().getDay()) { //getDay() method returns the weekday as a number between 0 and 6.  Exam: (sun=0,mon=1,tues=2)
+switch (
+  new Date().getDay() //getDay() method returns the weekday as a number between 0 and 6.  Exam: (sun=0,mon=1,tues=2)
+) {
   case 0:
     day = "Sunday";
     break;
@@ -161,7 +152,6 @@ switch (new Date().getDay()) { //getDay() method returns the weekday as a number
 }
 
 // console.log(day);
-
 
 let txt;
 switch (new Date().getDay()) {
@@ -191,7 +181,6 @@ switch (new Date().getDay()) {
 }
 // console.log(txt1)
 
-
 let x;
 
 switch (new Date().getDay()) {
@@ -207,9 +196,8 @@ switch (new Date().getDay()) {
 }
 // console.log(x);
 
-
 const age = 16;
-const text = (age < 18) ? "Minor" : "Adult";
+const text = age < 18 ? "Minor" : "Adult";
 
 // console.log(text);
 
@@ -217,15 +205,13 @@ const isMember = false;
 const discount = !isMember ? 0.2 : 0;
 // console.log(discount);
 
-
 const population = 30;
 
 const country = "Bangaldesh";
 
-const averagePopulation = `${country}'s population is ${population > 33 ? 'above' : 'below'} average`;
+const averagePopulation = `${country}'s population is ${population > 33 ? "above" : "below"} average`;
 
 // console.log(averagePopulation);
-
 
 // const bill = 430;
 // const tip1 = bill * (15 / 100);
@@ -239,16 +225,12 @@ const averagePopulation = `${country}'s population is ${population > 33 ? 'above
 
 // const bill = Number(prompt("Enter a bill: "));
 
-
 const tipFunc = (bill) => {
   const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
   return tip;
-}
+};
 
 // console.log(`The bill was ${bill}, the tip was ${tipFunc(bill)}, and the total value ${bill + tipFunc(bill)}`);
-
-
-
 
 // const number = parseInt(prompt("Enter a number: ")| 0);
 // console.log(number);
@@ -258,7 +240,6 @@ const tipFunc = (bill) => {
 // } else {
 //     console.log("Odd");
 // }
-
 
 // const number = parseInt(prompt("Enter a valid Number: "), 10);
 // let sum = 0;
@@ -273,7 +254,6 @@ const tipFunc = (bill) => {
 // }
 // console.log(sum)
 
-
 // const number = parseInt(prompt("Enter a number: "));
 // let countDown = (number) => {
 //     for (let i = number; i >= 0; i--){
@@ -287,11 +267,7 @@ const tipFunc = (bill) => {
 //     countDown(number);
 // }
 
-
-
-
 // const userAge = Number(prompt("Enter you'r age: "));
-
 
 // const ageCal = (userAge) => {
 //   if (isNaN(userAge)) {
@@ -312,12 +288,9 @@ const tipFunc = (bill) => {
 // const Age = ageCal(userAge);
 // console.log(Age);
 
-
-
 // const score = Number(prompt("Enter your score from 0 to 100. "));
 
 // let grade;
-
 
 // const passFail = (grades) => {
 //   let status = '';
@@ -328,7 +301,6 @@ const tipFunc = (bill) => {
 //     return `${status = 'Fail'}`
 //   }
 // }
-
 
 // const gradeCal = (score) => {
 
@@ -376,7 +348,6 @@ const tipFunc = (bill) => {
 // const mark = gradeCal(score);
 // console.log(mark);
 
-
 // const userName = prompt("Enter your user name: ");
 // const userPassword = prompt("Enter your password: ");
 
@@ -394,16 +365,13 @@ const tipFunc = (bill) => {
 //   }
 // };
 
-
 // let authLogin = login(userName,userPassword);
 
 // console.log(authLogin);
 
-
 //JavaScript test() method.
 
 // const password = prompt("Enter your password: ");
-
 
 // const pass = function (password) {
 //   if (password.length < 1) {
@@ -423,11 +391,9 @@ const tipFunc = (bill) => {
 // let passCheck = pass(password);
 // console.log(passCheck);
 
-
 // const number1 = Number(prompt("Enter first number: "));
 // const oparator = prompt("Enter a oparator between +, -, *, / : ");
 // const number2 = Number(prompt("Enter second number: "));
-
 
 // const calculator = (num1, num2, op) => {
 //   if (isNaN(num1) || isNaN(num2)) {
@@ -449,134 +415,216 @@ const tipFunc = (bill) => {
 //         return `The reminder of the two number is ${num1 % num2}`;
 //       default:
 //         return `Invalid Oparetor`;
-      
-      
+
 //   }
-  
+
 // }
 
 // const cal = calculator(number1, number2, oparator);
 // console.log(cal);
 
-
-
-
 // Introduction of Arrays
-const friends = ['Michael', 'Steven', 'Peter'];
-console.log(friends);
+// const friends = ['Michael', 'Steven', 'Peter'];
+// console.log(friends);
 
-const y = new Array(1991, 1984, 2008, 2020);
+// const y = new Array(1991, 1984, 2008, 2020);
 
-console.log(y[0]);
+// console.log(y[0]);
 
-console.log(friends[0]);
-console.log(friends[2]);
+// console.log(friends[0]);
+// console.log(friends[2]);
 
-console.log(friends.length);
-console.log(friends[friends.length - 1]);
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
 
-// replacing one value in the array
+// // replacing one value in the array
 
-friends[2] = 'Jay';
-console.log(friends);
+// friends[2] = 'Jay';
+// console.log(friends);
 
-const firstName = 'Jonas';
-const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+// const firstName = 'Jonas';
+// const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
 
-console.log(jonas);
-console.log(jonas[0]);
-console.log(jonas[1]);
-console.log(jonas[2]);
-console.log(jonas[3]);
-console.log(jonas[jonas.length - 1]);
-console.log(jonas[jonas.length - 1][0]);
-console.log(jonas[jonas.length - 1][1]);
-console.log(jonas[jonas.length - 1][2]);
+// console.log(jonas);
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// console.log(jonas[2]);
+// console.log(jonas[3]);
+// console.log(jonas[jonas.length - 1]);
+// console.log(jonas[jonas.length - 1][0]);
+// console.log(jonas[jonas.length - 1][1]);
+// console.log(jonas[jonas.length - 1][2]);
+
+// const calAge = function (brithYear) {
+//   return 2037 - brithYear;
+// }
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// const age1 = calAge(years[0]);
+// const age2 = calAge(years[1]);
+// const age3 = calAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+
+// const ages = [calAge(years[0]), calAge(years[1]), calAge(years[years.length - 1])];
+// console.log(ages);
+// console.log(ages.length);
+// console.log(ages[ages.length - 3]);
+// console.log(ages[ages.length - 2]);
+// console.log(ages[ages.length - 1]);
+
+// // Coverting an arrary to a String
+// const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+// fruits.push("Lemon");
+
+// const fru = fruits.toString();
+// console.log(typeof fruits);
+// console.log(typeof fru);
+
+// // Looping Array Elements
+
+// let fLen = fruits.length;
+// let arr = "";
+// console.log(fLen);
+
+// for (let i = 0; i < fLen; i++){
+//   arr += `${fruits[i]} \n`;
+// };
+
+// console.log(arr);
+
+// const fruit = ['Banana', 'Orange', 'Apple', 'Mango'];
+// let arr1 = [];
+
+// for (let i = 0; i < fruit.length; i++){
+//   arr1.push(fruit[i]);
+// };
+
+// console.log(arr1);
+
+// const fu = ["WatterMalon", "Lemon", "Pine", "Cart"];
+
+// fu.forEach(function (item, index) {
+//   fu.push('YouGart')
+//   console.log(index + ": " + item);
+// });
+
+// console.log(fu);
+
+// fruits[fruits.length] = "Pines";
+// console.log(fruits);
+
+// //In javaScript array always use numbered indexes.
+
+// //Example
+// const person = [];
+// person[0] = "Jhon";
+// person[1] = "Doe";
+// person[2] = 46;
+// console.log(person.length);
+// console.log(person[0]);
+
+// const points = new Array(40, 100, 1, 5, 25, 10);
+// const points1 = [40, 100, 1, 5, 25, 10];
+// console.log(points);
+// console.log(points1);
+
+// const ponits2 = new Array(40, 100, 1);
+// const ponits3 = new Array(40, 100);
+// const ponits4 = new Array(40);
+
+// const points5 = [40];
+// console.log(ponits2);
+// console.log(ponits3);
+// console.log(ponits4);
+// console.log(points5);
+
+/* Write your code below. Good luck! 🙂 */
+
+// const calcTip = (bill) =>{
+//     if(bill >= 50 && bill <= 300){
+//         return bill * 0.15;
+//     }else{
+//         return bill * 0.2;
+//     }
+// };
+
+// const bills = [125,555,44];
+// let tips = [];
+// for(let i = 0; i < bills.length; i++){
+//     // console.log(calcTip(bills[i]));
+//     tips.push(calcTip(bills[i]));
+// }
+
+// const totals = [];
+// for (let i = 0; i < bills.length; i++){
+//     totals.push(bills[i] + tips[i]);
+// }
+
+// console.log(`The bill was ${bills}, the tip was ${tips} and the total bill was ${totals}`);
 
 
-const calAge = function (brithYear) {
-  return 2037 - brithYear;
+
+
+const num1 = prompt("Enter first number: ");
+  console.log(num1);
+const op = prompt("Enter a oparator: + or - or * or / or % ");
+  console.log(op);
+const num2 = prompt("Enter second number: ");
+console.log(num2);
+const funCal = (num1, op, num2) => {
+      let result;
+      if (isNaN(num1) || isNaN(num2)) {
+        result = `Invalid number input ${num1} & ${op} & ${num2}`;
+      } else {
+        switch (op) {
+          case "+":
+            result = `The sum of the two numbers is ${num1 + num2}`;
+            break;
+          case "-":
+            result = `The sub of the two numbers is ${num1 - num2}`;
+            break;
+          case "*":
+            result = `The division of the two numbers is ${num1 * num2}`;
+            break;
+          case "/":
+            if (num2 === 0) {
+              result = "Cannot divided by zero";
+            } else {
+              result = `The division of the two numbers is ${num1 / num2}`;
+            }
+            break;
+          case "%":
+            result = `The reminder of the two numbers is ${num1 % num2}`;
+            break;
+          default:
+            result = "Invalid Operator";
+        }
+      }
+
+      return result;
+    };
+    let res = funCal(Number(num1), op, Number(num2));
+    console.log(res);
+let i = 0;
+
+while (true) {
+  let again = prompt("Do you want to repeate the calculation? ");
+  if (again == "exit") {
+    console.log('Stop calclulation');
+    break;
+  }
+  else {
+    const num1 = prompt("Enter first number: ");
+    console.log(num1);
+    const op = prompt("Enter a oparator: + or - or * or / or % ");
+    console.log(op);
+    const num2 = prompt("Enter second number: ");
+    console.log(num2);
+    let show = funCal(Number(num1), op, Number(num2));
+    console.log(show);
+  }
+  i = i + 1;
 }
 
-const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calAge(years[0]);
-const age2 = calAge(years[1]);
-const age3 = calAge(years[years.length - 1]);
-console.log(age1, age2, age3);
-
-const ages = [calAge(years[0]), calAge(years[1]), calAge(years[years.length - 1])];
-console.log(ages);
-console.log(ages.length);
-console.log(ages[ages.length - 3]);
-console.log(ages[ages.length - 2]);
-console.log(ages[ages.length - 1]);
-
-// Coverting an arrary to a String
-const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
-fruits.push("Lemon");
-
-const fru = fruits.toString();
-console.log(typeof fruits);
-console.log(typeof fru);
-
-// Looping Array Elements
-
-let fLen = fruits.length;
-let arr = "";
-console.log(fLen);
-
-for (let i = 0; i < fLen; i++){
-  arr += `${fruits[i]} \n`;
-};
-
-console.log(arr);
-
-const fruit = ['Banana', 'Orange', 'Apple', 'Mango'];
-let arr1 = [];
-
-for (let i = 0; i < fruit.length; i++){
-  arr1.push(fruit[i]);
-};
-
-console.log(arr1);
-
-
-
-const fu = ["WatterMalon", "Lemon", "Pine", "Cart"];
-
-fu.forEach(function (item, index) {
-  fu.push('YouGart')
-  console.log(index + ": " + item);
-});
-
-console.log(fu);
-
-
-fruits[fruits.length] = "Pines";
-console.log(fruits);
-
-//In javaScript array always use numbered indexes.
-
-//Example
-const person = [];
-person[0] = "Jhon";
-person[1] = "Doe";
-person[2] = 46;
-console.log(person.length);
-console.log(person[0]);
-
-const points = new Array(40, 100, 1, 5, 25, 10);
-const points1 = [40, 100, 1, 5, 25, 10];
-console.log(points);
-console.log(points1);
-
-const ponits2 = new Array(40, 100, 1);
-const ponits3 = new Array(40, 100);
-const ponits4 = new Array(40);
-
-const points5 = [40];
-console.log(ponits2);
-console.log(ponits3);
-console.log(ponits4);
-console.log(points5);
