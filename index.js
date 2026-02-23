@@ -326,23 +326,23 @@
 
 // Logical Operators
 
-const hasDriverLicense = true;
-const hasGoodVision = true;
+// const hasDriverLicense = true;
+// const hasGoodVision = true;
 
-console.log(hasDriverLicense && hasGoodVision);
-console.log(hasDriverLicense || hasGoodVision);
-console.log(!hasDriverLicense);
+// console.log(hasDriverLicense && hasGoodVision);
+// console.log(hasDriverLicense || hasGoodVision);
+// console.log(!hasDriverLicense);
 
-let i = 0;
+// let i = 0;
 
-while (true) {
-    let pass = Boolean(prompt("Enter your password: "));
-    if (pass === true) {
-        console.log("you are succesfully login");
-        break;
-    }
-    i = i + 1
-};
+// while (true) {
+//     let pass = Boolean(prompt("Enter your password: "));
+//     if (pass === true) {
+//         console.log("you are succesfully login");
+//         break;
+//     }
+//     i = i + 1
+// };
 
 // if (hasDriverLicense && hasGoodVision) {
 //     console.log('Sarah is able to drive!');
@@ -359,3 +359,210 @@ while (true) {
 // }
 
 // console.log(hasDriverLicense && hasGoodVision && !isTired);
+
+
+// Coding Challenge #3
+
+
+// const scoreDolpins = (97 + 112 + 101) / 3;
+// const scoreKoalas = (109 + 95 + 106) / 3;
+// console.log(scoreDolpins, scoreKoalas);
+
+
+
+// const teamFunc = (dolpinAvg, kolasAvg) => {
+//     let points;
+//     if (dolpinAvg >= 100 && dolpinAvg > kolasAvg) {
+//         points = `Dolphins win the trophy`;
+//     } else if (kolasAvg >= 100 && kolasAvg > dolpinAvg) {
+//         points = `Koalas win the trophy`;
+//     } else if (dolpinAvg === kolasAvg && dolpinAvg >= 100 && kolasAvg >= 100) {
+//         points = `Both win the tropy`;
+//     } else {
+//         points = `No team wins the tropy`;
+//     }
+//     return points;
+// }
+
+
+// const res = teamFunc(scoreDolpins, scoreKoalas);
+// console.log(res);
+
+
+// The switch Statement
+
+// const day = 'monday';
+
+// switch (day) {
+//     case 'monday':
+//         console.log('PLan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('Prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('Enjoy the weekend');
+//         break;
+//     default:
+//         console.log('Not a valid day!');
+// }
+
+
+
+// const tip1 = 15 / 100;
+// const tip2 = 20 / 100;
+// console.log(tip1, tip2);
+
+// const bill = 275;
+
+// const tips = bill >= 50 && bill <= 300 ? bill * tip1 : bill * tip2;
+// const total = bill + tips;
+
+// console.log(`The bill was ${bill}, the tip was ${tips}, and the total value ${total}`);
+
+// Active Strict Mode
+// let hasDriverLicense = false;
+// const passTest = true;
+
+// if (passTest) {
+//     hasDriverLicense = true;
+//     console.log(hasDriverLicense);
+// };
+// if (hasDriverLicense) console.log('I can drive :D');
+
+// const interface = "Audio";
+// const private = 534;
+
+
+// Functions
+// function logger() {
+//     console.log('My name is Jonas');
+// };
+
+// logger();
+
+// function fruitProcessor(apples, oranges) {
+//     const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//     return juice;
+// }
+
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
+
+// const appleOrangeJuice = fruitProcessor(2, 4);
+// console.log(appleOrangeJuice);
+
+// Function Declarations vs. Expressions
+
+
+// Function declaration
+
+// function calAge1(brithYear) {
+//     return 2037 - brithYear;
+// }
+
+// const age1 = calAge1(1991);
+
+
+// // Function expression
+
+// const calAge2 = function (brithYear) {
+//     return 2037 - brithYear;
+// }
+
+// const age2 = calAge2(1991);
+
+// console.log(age1, age2);
+
+
+// Arrow functions
+
+
+// const calcAge = brithYear => 2037 - brithYear;
+// const age = calcAge(1991);
+// // console.log(age);
+
+
+// const yearsUntilRetirement = (brithYear, fristName) => {
+//     const age = 2037 - brithYear;
+//     const retirement = 65 - age;
+
+//     return `${fristName} retires in ${retirement} years`;
+// };
+
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+
+
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// };
+
+// function fruitProcessor(apples, oranges) {
+//     const applesPieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
+
+//     const juice = `Juice with ${applesPieces} piece of apple and ${orangePieces} pieces of orange.`;
+//     return juice;
+// };
+
+
+// console.log(fruitProcessor(2, 3));
+
+
+// Reviewing Functions
+
+// const calcAge = function (brithYear) {
+//     return 2037 - brithYear;
+// };
+
+// const yearsUntilRetirement = function (brithYear, firstName) {
+//     const age = calcAge(brithYear);
+//     const retirement = 65 - age;
+
+//     if (retirement > 0) {
+//         console.log(`${firstName} retires in ${retirement}`);
+//         return retirement;
+//     } else {
+//         console.log(`${firstName} has already retired 🎉`);
+//         return -1;
+//     }
+// };
+
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+// console.log(yearsUntilRetirement(1950, 'Mike'));
+
+
+// TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+// TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+// const calcAverage = (num1, num2, num3) => {
+//     return (num1 + num2 + num3) / 3;
+// };
+
+// // const dolpins = calcAverage(44, 23, 71);
+// // const koalas = calcAverage(23, 34, 12);
+// const dolpins = calcAverage(23, 34, 27);
+// const koalas = calcAverage(85, 54, 41);
+// console.log(dolpins, koalas);
+
+
+// const checkWinner = (avgDolhins, avgKoalas) => {
+//     if (avgDolhins >= 2 * avgKoalas) {
+//         return `Dolphins win 🏆 ${avgDolhins} vs. ${avgKoalas}`;
+//     } else if (avgKoalas >= 2 * avgDolhins) {
+//         return `Koalas win 🏆 ${avgKoalas} vs. ${avgDolhins}`;
+//     } else {
+//         return `No team wins...`;
+//     }
+// };
+
+// const winer = checkWinner(dolpins, koalas);
+// console.log(winer);
+
+

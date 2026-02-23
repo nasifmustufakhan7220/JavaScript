@@ -564,67 +564,89 @@ const tipFunc = (bill) => {
 // console.log(`The bill was ${bills}, the tip was ${tips} and the total bill was ${totals}`);
 
 
+// const funCal = (num1, op, num2) => {
+//     let result;
+//     if (isNaN(num1) || isNaN(num2)) {
+//       result = `Invalid number input ${num1} & ${op} & ${num2}`;
+//     } else {
+//       switch (op) {
+//         case "+":
+//           result = `The sum of the two numbers is ${num1 + num2}`;
+//           break;
+//         case "-":
+//           result = `The subtraction of the two numbers is ${num1 - num2}`;
+//           break;
+//         case "*":
+//           result = `The multiplication of the two numbers is ${num1 * num2}`;
+//           break;
+//         case "/":
+//           if (num2 === 0) {
+//             result = "Cannot divide by zero";
+//           } else {
+//             result = `The division of the two numbers is ${num1 / num2}`;
+//           }
+//           break;
+//         case "%":
+//           if (num2 === 0) {
+//             result = "Cannot divide by zero";
+//           } else {
+//             result = `The remainder of the two numbers is ${num1 % num2}`;
+//           }
+//           break;
+//         default:
+//           result = "Invalid operator";
+//       }
+//     }
+
+//     return result;
+//   };
+
+// while (true) {
+//   const num1 = prompt("Enter first number: ");
+//   console.log(num1);
+//   const op = prompt("Enter a oparator: + or - or * or / or % ");
+//   console.log(op);
+//   const num2 = prompt("Enter second number: ");
+//   console.log(num2);
+  
+//   let res = funCal(Number(num1), op, Number(num2));
+//   console.log(res);
+//   let again = prompt("Do you want to repeate the calculation? ").trim().toLowerCase();
+//   if (again === "exit") {
+//     console.log("Stop calculation");
+//     break;
+//   }
+// }
 
 
-const num1 = prompt("Enter first number: ");
-  console.log(num1);
-const op = prompt("Enter a oparator: + or - or * or / or % ");
-  console.log(op);
-const num2 = prompt("Enter second number: ");
-console.log(num2);
-const funCal = (num1, op, num2) => {
-      let result;
-      if (isNaN(num1) || isNaN(num2)) {
-        result = `Invalid number input ${num1} & ${op} & ${num2}`;
-      } else {
-        switch (op) {
-          case "+":
-            result = `The sum of the two numbers is ${num1 + num2}`;
-            break;
-          case "-":
-            result = `The sub of the two numbers is ${num1 - num2}`;
-            break;
-          case "*":
-            result = `The division of the two numbers is ${num1 * num2}`;
-            break;
-          case "/":
-            if (num2 === 0) {
-              result = "Cannot divided by zero";
-            } else {
-              result = `The division of the two numbers is ${num1 / num2}`;
-            }
-            break;
-          case "%":
-            result = `The reminder of the two numbers is ${num1 % num2}`;
-            break;
-          default:
-            result = "Invalid Operator";
-        }
-      }
 
-      return result;
-    };
-    let res = funCal(Number(num1), op, Number(num2));
-    console.log(res);
-let i = 0;
+const numbers = [10, 20, 30, 40, 50];
 
-while (true) {
-  let again = prompt("Do you want to repeate the calculation? ");
-  if (again == "exit") {
-    console.log('Stop calclulation');
-    break;
+
+const numAvg = (num) => {
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    // console.log(num[i]);
+    sum += num[i];
+  };
+  const avg = sum / num.length; // important
+  // console.log(sum,avg);
+  if (avg > 50) {
+    return `
+    Numbers: [${num}]
+    Total: ${sum}
+    Average: ${avg}
+    ${avg > 50 ? 'Average is greater than 50':'Average is greater equal 50'} 
+    `;
+  } else {
+    return `
+    Numbers: [${num}]
+    Total: ${sum}
+    Average: ${avg}
+    Average is less than 50 
+    `;
   }
-  else {
-    const num1 = prompt("Enter first number: ");
-    console.log(num1);
-    const op = prompt("Enter a oparator: + or - or * or / or % ");
-    console.log(op);
-    const num2 = prompt("Enter second number: ");
-    console.log(num2);
-    let show = funCal(Number(num1), op, Number(num2));
-    console.log(show);
-  }
-  i = i + 1;
-}
+  
+};
 
-
+console.log(numAvg(numbers));
