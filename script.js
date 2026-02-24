@@ -620,7 +620,7 @@ const tipFunc = (bill) => {
 
 
 
-const numbers = [10, 20, 30, 40, 50];
+// const numbers = [10, 20, 30, 40, 50];
 
 
 const numAvg = (num) => {
@@ -636,17 +636,48 @@ const numAvg = (num) => {
     Numbers: [${num}]
     Total: ${sum}
     Average: ${avg}
-    ${avg > 50 ? 'Average is greater than 50':'Average is greater equal 50'} 
+    ${avg > 50 ? 'Average is greater than 50':'Average is greater equal 50'}
     `;
   } else {
     return `
     Numbers: [${num}]
     Total: ${sum}
     Average: ${avg}
-    Average is less than 50 
+    Average is less than 50
     `;
   }
   
 };
 
-console.log(numAvg(numbers));
+// console.log(numAvg(numbers));
+
+
+
+
+let studentArr = [50, 60, 70];
+
+const calcAvg = (student) => {
+  let sum = 0;
+  let pass = 0;
+  let fail = 0;
+  for (let i = 0; i < student.length; i++) {
+    sum += student[i];
+    // if (student[i] >= 40) {
+    //   pass++;
+    // } else {
+    //   fail++;
+    // }
+
+    student[i] >= 40 ? pass++ : fail++;
+  };
+  const avg = sum / student.length;
+
+  return `
+  Scores: [${student}]
+  Average: ${avg}
+  Passed: ${pass}
+  Failed: ${fail}
+  `
+};
+
+console.log(calcAvg(studentArr));
