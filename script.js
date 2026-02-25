@@ -654,30 +654,51 @@ const numAvg = (num) => {
 
 
 
-let studentArr = [50, 60, 70];
+// let studentArr = [50, 60, 70];
 
-const calcAvg = (student) => {
-  let sum = 0;
-  let pass = 0;
-  let fail = 0;
-  for (let i = 0; i < student.length; i++) {
-    sum += student[i];
-    // if (student[i] >= 40) {
-    //   pass++;
-    // } else {
-    //   fail++;
-    // }
+// const calcAvg = (student) => {
+//   let sum = 0;
+//   let pass = 0;
+//   let fail = 0;
+//   for (let i = 0; i < student.length; i++) {
+//     sum += student[i];
+//     // if (student[i] >= 40) {
+//     //   pass++;
+//     // } else {
+//     //   fail++;
+//     // }
 
-    student[i] >= 40 ? pass++ : fail++;
+//     student[i] >= 40 ? pass++ : fail++;
+//   };
+//   const avg = sum / student.length;
+
+//   return `
+//   Scores: [${student}]
+//   Average: ${avg}
+//   Passed: ${pass}
+//   Failed: ${fail}
+//   `
+// };
+
+// console.log(calcAvg(studentArr));
+
+
+
+const func = (num) => {
+  let max = num[0];
+  let min = num[0];
+  for (let i = 1; i < num.length; i++){
+    if (num[i] > max) {
+      max = num[i];
+    }
+    if (num[i] < min) {
+      min = num[i];
+    }
   };
-  const avg = sum / student.length;
-
-  return `
-  Scores: [${student}]
-  Average: ${avg}
-  Passed: ${pass}
-  Failed: ${fail}
-  `
+  console.log(max,min);
 };
 
-console.log(calcAvg(studentArr));
+const num = [45, 78, 12, 89, 34];
+// let result = func(num);
+// console.log(result);
+func(num);
