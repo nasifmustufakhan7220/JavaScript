@@ -684,21 +684,67 @@ const numAvg = (num) => {
 
 
 
-const func = (num) => {
-  let max = num[0];
-  let min = num[0];
-  for (let i = 1; i < num.length; i++){
-    if (num[i] > max) {
-      max = num[i];
-    }
-    if (num[i] < min) {
-      min = num[i];
-    }
-  };
-  console.log(max,min);
-};
+// const func = (num) => {
+//   let max = 0;
+//   let min = 0;
+//   let difference;
+//   for (let i = 0; i < num.length; i++){
+//     if (num[i] > max) {
+//       max = num[i];
+//     }
+//     if (num[i] > min) {
+//       min = num[i];
+//     }
+//   };
+  
+//   difference = max - min;
+//   console.log(max, min,difference);
+// };
 
-const num = [45, 78, 12, 89, 34];
-// let result = func(num);
-// console.log(result);
-func(num);
+// const num = [45, 78, 12, 89, 34];
+// func(num);
+
+
+// const funcReverse = (arr) => {
+//   let minus = arr.length - 1;
+//   let numArr = [];
+//   for (let i = minus; i >= 0; i--){
+//     numArr.push(arr[i]);
+//   }
+//   return `Original: [${arr}]
+//   Reversed: [${numArr}]
+//   `;
+// };
+// const arr = [1, 2, 3, 4, 5];
+// console.log(funcReverse(arr));
+
+
+
+// for (let i = 5; i > 0; i--){
+//   console.log(i);
+// }
+
+
+const funcSecondLargest = (arr) => {
+  let firstCurrentMax = arr[0];
+  let secondCurretMax = arr[0];
+  if (arr.length < 2) {
+      return `less than 2`;
+  }
+  for (let i = 1; i < arr.length; i++){
+    
+    if (arr[i] > firstCurrentMax) {
+      firstCurrentMax = arr[i];
+      secondCurretMax = firstCurrentMax;
+    } 
+    if (firstCurrentMax > secondCurretMax) {
+      secondCurretMax = firstCurrentMax;
+    }
+
+  }
+  return `firstCurrentMax: ${firstCurrentMax}
+  secondCurretMax: ${secondCurretMax}
+  `;
+};
+const arr = [10, 5, 8, 18 ,20, 15];
+console.log(funcSecondLargest(arr));
