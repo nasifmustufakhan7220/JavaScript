@@ -50,8 +50,49 @@
 // }
 
 
-const data1 = ['alu', 'tomato', 'peyaj'];
-const data2 = ['rowsun', 'morich', 'pudinah'];
+// const data1 = ['alu', 'tomato', 'peyaj'];
+// const data2 = ['rowsun', 'morich', 'pudinah'];
 
-let mixed = data1.concat(data2);
-console.log(data1,'\n',data2,'\n', mixed);
+// let mixed = data1.concat(data2);
+// console.log(data1,'\n',data2,'\n', mixed);
+
+
+// let num = 1;
+
+// while (num <= 60) {
+//     console.log(num,"I will invest at least 6 hrs every single day for next 60 days!");
+//     num++;
+// }
+
+
+// let num = 61;
+// while (num <= 100) {
+//     if (num % 2 != 0) {
+//         console.log(num);
+//     }
+//     num++;
+// }
+
+// let num = 78;
+// while (num <= 98) {
+//     if (num % 2 === 0) {
+//         console.log(num);
+//     }
+//     num++;
+// }
+
+
+// let num = 1;
+
+// while (num <= 10) {
+//     console.log(5 * num);
+//     num++
+// }
+
+
+let num = 21;
+
+while (num >= 15) {
+    console.log(num);
+    num--;
+}

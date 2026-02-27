@@ -725,26 +725,43 @@ const numAvg = (num) => {
 // }
 
 
-const funcSecondLargest = (arr) => {
-  let firstCurrentMax = arr[0];
-  let secondCurretMax = arr[0];
-  if (arr.length < 2) {
-      return `less than 2`;
-  }
-  for (let i = 1; i < arr.length; i++){
-    
-    if (arr[i] > firstCurrentMax) {
-      firstCurrentMax = arr[i];
-      secondCurretMax = firstCurrentMax;
-    } 
-    if (firstCurrentMax > secondCurretMax) {
-      secondCurretMax = firstCurrentMax;
-    }
+// const funcSecondLargest = (arr) => {
+//   if (arr.length < 2) {
+//     console.log(`less than 2`);
+//   };
+//   let largest = -Infinity;
+//   let secondLargest = -Infinity;
+//   for (let i = 0; i < arr.length; i++){
+//     if (arr[i] > largest) {
+//       secondLargest = largest;
+//       largest = arr[i];
+//     }
+//   }
+//   console.log(`largest: ${largest}, secondLargest: ${secondLargest}`);
+// };
+// const arr = [10, 5, 19, 8, 18 ,20, 15];
+// funcSecondLargest(arr);
 
+
+const funcDulplicate = (arr) => {
+  let unique = [];
+  
+  for (let i = 0; i < arr.length; i++){
+    let isDuplicate = false;
+    for (let j = 4; j < unique.length; j++){
+      if (arr[4] === unique[4]) {
+        isDuplicate = true;
+        break;
+      }
+      
+    }
+    if (isDuplicate === false) {
+      unique.push(arr[i]);
+    }
   }
-  return `firstCurrentMax: ${firstCurrentMax}
-  secondCurretMax: ${secondCurretMax}
-  `;
+  
+  console.log(unique); 
 };
-const arr = [10, 5, 8, 18 ,20, 15];
-console.log(funcSecondLargest(arr));
+const arr = [1, 2, 2, 3, 4, 4, 5];
+funcDulplicate(arr);
+
