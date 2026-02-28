@@ -90,9 +90,67 @@
 // }
 
 
-let num = 21;
+// let num = 21;
 
-while (num >= 15) {
-    console.log(num);
-    num--;
+// while (num >= 15) {
+//     console.log(num);
+//     num--;
+// }
+
+
+// let i = 10;
+// while (i < 15) {
+//     i++;
+//     if (i % 5 !== 0) {
+//         continue;
+//     };
+//     console.log(i);
+    
+// }
+
+
+// let i = 1;
+// let sum = 0;
+// while (i) {
+//     sum += i;
+//     if (sum >= 100) {
+//         break;
+//     }
+//     i++;
+// }
+// console.log(sum);
+
+// let i = 2;
+// function isSquare(i) {
+//     let root = Math.sqrt(i);
+//     return Number.isInteger(root);
+// }
+// while (i < 20) {
+//     if(isSquare(i)){
+//         console.log(i);
+//         break;
+//     };
+//     i++;
+// }
+
+
+
+const login = (num, limit, compare) => {
+    let i = num;
+    let x;
+    while (i < limit) {
+    let login = Number(prompt("Enter your password: "));
+    if (login === compare) {
+        x = ("You are successfully login");
+        break;
+    };
+    i++;
+    }
+    if (typeof x !== typeof undefined) {
+        return x
+    } else {
+        return `You are kicked out`
+    }
 }
+
+console.log(login(0, 3, 1234));
