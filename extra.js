@@ -135,22 +135,99 @@
 
 
 
-const login = (num, limit, compare) => {
-    let i = num;
-    let x;
-    while (i < limit) {
-    let login = Number(prompt("Enter your password: "));
-    if (login === compare) {
-        x = ("You are successfully login");
-        break;
-    };
-    i++;
-    }
-    if (typeof x !== typeof undefined) {
-        return x
-    } else {
-        return `You are kicked out`
-    }
+// const login = (num, limit, compare) => {
+//     let i = num;
+//     let x;
+//     while (i < limit) {
+//     let login = Number(prompt("Enter your password: "));
+//     if (login === compare) {
+//         x = ("You are successfully login");
+//         break;
+//     };
+//     i++;
+//     }
+//     if (typeof x !== typeof undefined) {
+//         return x
+//     } else {
+//         return `You are kicked out`
+//     }
+// }
+
+// console.log(login(0, 3, 1234));
+
+
+
+//^ Array is a mutable dataType and String is a Immutable dataType. Because we easily chnage elements of an array, but we can not ever change any string elements. Here is the prove :
+
+const numbers = [22, 23, 556, 25, 26];
+//console.log(numbers); // ^ [ 22, 23, 556, 25, 26 ]===> It is the original array's elements before chnaging .
+
+numbers[2] = 24;
+
+//console.log(numbers); // ^ [ 22, 23, 24, 25, 26 ]======> It is the new array's elements after chaning it.
+
+
+
+// ? String
+
+
+const capital = "Dhaka";
+//console.log(capital);  // ^ Dhaka ====> It is the original string's elements before chnaging .
+
+
+
+capital[0] = 'F';
+//console.log(capital); // ^ Dhaka ====> It is the original string's elements after chnaging.
+
+
+const address = 'Muktarpara';
+
+// console.log(address.slice(0, 6));
+// console.log(address.substring(1, 7));
+
+// console.log(address.split(','));
+const addArr = ['Muktarpara'];
+// console.log(addArr.join());
+
+
+const sentence = 'I am learning Web Development.';
+/* 
+? let reverse = '';
+
+? for (const revSen of sentence) {
+    // console.log(revSen);
+    ? reverse = revSen + reverse;
+? }
+? console.log(reverse);
+*/
+
+
+// ? let reverse = '';
+// * for (let i = 0; i < sentence.length; i++){
+//  &   reverse = sentence[i] + reverse;
+// }
+// ! console.log(reverse);
+
+
+// const reverse = sentence.split('').reverse().join('');
+// console.log(reverse);
+
+
+const mobile = {
+    brand: 'Sawmi',
+    price: 16999,
+    camera: '12 mgpxl',
+    isNew: false
+};
+
+for (const key in mobile) {
+    // console.log(key);
+    // console.log(key, ":",mobile[key]);
 }
 
-console.log(login(0, 3, 1234));
+
+const keys = Object.keys(mobile);
+
+for (const key in keys) {
+    console.log(mobile[key]);
+}
