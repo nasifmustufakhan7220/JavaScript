@@ -566,3 +566,57 @@
 // console.log(winer);
 
 
+
+// for (let exersice = 1; exersice < 4; exersice++){
+//     for (let i = 0; i < 5; i++){
+//         console.log(i);
+//     }
+// }
+
+
+// const jonas = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michale', 'Peter', 'Steven'],
+//     true
+// ];
+
+// let newArr = [];
+
+// for (let i = 0; i < jonas.length; i++){
+//     if (typeof jonas[i] !== 'Number' && typeof jonas[i] !== Boolean) {
+//         newArr = jonas[i];
+//     };
+// };
+
+// console.log(newArr);
+
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log(dice);
+// }
+
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+/* Write your code below. Good luck! 🙂 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+
+const totals = [];
+
+for(let i = 0; i < bills.length; i++){
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
+};
+console.log(totals);
