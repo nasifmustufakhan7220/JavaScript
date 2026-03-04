@@ -213,6 +213,13 @@ const sentence = 'I am learning Web Development.';
 // console.log(reverse);
 
 
+
+
+// for (const key in mobile) {
+//     // console.log(key);
+//     // console.log(key, ":",mobile[key]);
+// }
+
 const mobile = {
     brand: 'Sawmi',
     price: 16999,
@@ -220,14 +227,51 @@ const mobile = {
     isNew: false
 };
 
-for (const key in mobile) {
-    // console.log(key);
-    // console.log(key, ":",mobile[key]);
-}
-
-
 const keys = Object.keys(mobile);
 
-for (const key in keys) {
-    console.log(mobile[key]);
-}
+// for (const [index, key] of keys.entries()) {
+//     console.log("Index =", index, "Key =", key, "Value =", mobile[key]);
+// }
+
+keys.forEach((key, index) => {
+    console.log("Key =", key, "", "index =", index, "", "Value =", mobile[key]);
+})
+// const keys = Object.keys(mobile);
+// console.log("=== Basic for loop ===");
+
+// for (let i = 0; i < keys.length; i++){
+//     console.log("index[i] =", i);
+//     console.log("Keys[i] =", keys[i]);
+// }
+
+// console.log("=== for...in loop ===");
+
+// for (const key in keys) {
+//     console.log("Key =", key);
+//     console.log("Keys[key] =", keys[key]);
+// }
+
+// console.log("=== for...of loop");
+
+// for (const key of keys) {
+//     console.log("Key =", key);
+//     console.log("mobile[key] =", mobile[key]);
+// }
+
+
+
+
+// const keys = Object.keys(mobile);
+
+
+// for (let i = 0; i < keys.length; i++){
+//     console.log(keys[i]);
+// }
+
+// for (const key in mobile) {
+//    console.log(mobile[key]);
+// }
+
+// for (const key of mobile) {
+//   console.log(key);
+// }

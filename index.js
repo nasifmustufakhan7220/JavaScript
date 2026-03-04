@@ -603,20 +603,75 @@
 // }
 
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
 
 /* Write your code below. Good luck! 🙂 */
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-const tips = [];
+// const tips = [];
 
-const totals = [];
+// const totals = [];
 
-for(let i = 0; i < bills.length; i++){
-    tips.push(calcTip(bills[i]));
-    totals.push(tips[i] + bills[i]);
-};
-console.log(totals);
+// for(let i = 0; i < bills.length; i++){
+//     tips.push(calcTip(bills[i]));
+//     totals.push(tips[i] + bills[i]);
+// };
+// console.log(totals);
+
+// const jonas = {
+//   firstName:  'Jonas',
+//   lastName:   'Schmedtmann',
+//   birthYeah:   1991,
+//   job:        'teacher',
+//   friends: ['Michale', 'Peter', 'Steven'],
+//   calcAge: function (birthYeah) {
+//     return 2037 - birthYeah;
+//   }
+// };
+
+// console.log(jonas['calcAge'](1992));
+// console.log(jonas.birthYeah);
+
+
+// const bestFriend = prompt("Enter the name of Michale as jonas best friend. ");
+
+//^ const frnd = jonas[bestFriend];
+
+//^ let i = 0;
+//^ for (const value of frnd) {
+
+//^   if (i === i) {
+//^     jonas['bestFriend'] = value;
+    
+//^   }
+//^   i++
+// }
+
+// console.log(jonas);
+
+
+// this keyword + declear method inside a object
+// const jonas = {
+//   firstName:  'Jonas',
+//   lastName:   'Schmedtmann',
+//   birthYeah:   1991,
+//   job:        'teacher',
+//   friends: ['Michale', 'Peter', 'Steven'],
+//   hasDriverLicence: true,
+// ^  calcAge: function () {
+// ^    this.age = 2037 - this.birthYeah;
+// ^    return this['age'];
+//   },
+// ^  jonasDetails: function () {
+// ^    this.details = `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriverLicence === true ? 'a' : 'no'} driver's license`;
+// ^    return this.details;
+//   }
+// };
+
+jonas.jonasDetails();
+console.log(jonas.details);
+console.log(jonas);
+// console.log(jonas);
