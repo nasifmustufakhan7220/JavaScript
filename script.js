@@ -662,11 +662,11 @@ const numAvg = (num) => {
 //   let fail = 0;
 //   for (let i = 0; i < student.length; i++) {
 //     sum += student[i];
-//     // if (student[i] >= 40) {
-//     //   pass++;
-//     // } else {
-//     //   fail++;
-//     // }
+    // if (student[i] >= 40) {
+    //   pass++;
+    // } else {
+    //   fail++;
+    // }
 
 //     student[i] >= 40 ? pass++ : fail++;
 //   };
@@ -743,25 +743,92 @@ const numAvg = (num) => {
 // funcSecondLargest(arr);
 
 
-const funcDulplicate = (arr) => {
-  let unique = [];
+// ^const funcDulplicate = (arr) => {
+//   ^let unique = [];
   
-  for (let i = 0; i < arr.length; i++){
-    let isDuplicate = false;
-    for (let j = 4; j < unique.length; j++){
-      if (arr[4] === unique[4]) {
-        isDuplicate = true;
-        break;
-      }
+//  ^ for (let i = 0; i < arr.length; i++){
+//     ^let isDuplicate = false;
+//     ^for (let j = 4; j < unique.length; j++){
+//       ^if (arr[4] === unique[4]) {
+//        ^ isDuplicate = true;
+//        ^ break;
+//       }
       
-    }
-    if (isDuplicate === false) {
-      unique.push(arr[i]);
-    }
-  }
+//     }
+//     ^if (isDuplicate === false) {
+//       ^unique.push(arr[i]);
+//     }
+//   }
   
-  console.log(unique); 
+//   console.log(unique);
+// };
+// const arr = [1, 2, 2, 3, 4, 4, 5];
+// funcDulplicate(arr);
+
+
+
+
+// const calcPos = (arr) => {
+//   let positiveNumbers = [];
+//   for (const value of arr) {
+//     if (value > 0) {
+//       positiveNumbers.push(value);
+//     }
+//   }
+//   return positiveNumbers;
+// }
+
+// const numbers = [12, -5, 7, 0, -3, 9, 21];
+// console.log(calcPos(numbers));
+
+
+// const calcObj = (obj) => {
+//   for (const key in obj) {
+//    console.log(`${key} : ${obj[key]}`);
+//   }
+// }
+
+// const student = {
+//   name: "Nasif",
+//   age: 22,
+//   department: "CSE",
+//   university: "XYZ University"
+// };
+
+// calcObj(student);
+
+// const users = [
+//   { name: "Ali", isActive: true },
+//   { name: "Sara", isActive: false },
+//   { name: "John", isActive: true }
+// ];
+
+// for (const value of users) {
+//   let keys = value;
+//   // console.log(keys);
+//   for (const key in keys) {
+//     // console.log(keys[key]);
+//     if (keys.isActive === true) {
+//       console.log(keys.name);
+//       break;
+//     }
+//     break;
+// }
+// };
+
+
+
+const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+let counter = {};
+for (const value of words) {
+  if (counter[value]) {
+     counter[value]++;
+  } else {
+    counter[value] = 1;
+  }
+ 
 };
-const arr = [1, 2, 2, 3, 4, 4, 5];
-funcDulplicate(arr);
+console.log(counter);
+
 

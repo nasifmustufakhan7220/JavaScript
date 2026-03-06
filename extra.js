@@ -220,23 +220,23 @@ const sentence = 'I am learning Web Development.';
 //     // console.log(key, ":",mobile[key]);
 // }
 
-const mobile = {
-    brand: 'Sawmi',
-    price: 16999,
-    camera: '12 mgpxl',
-    isNew: false
-};
+// const mobile = {
+//     brand: 'Sawmi',
+//     price: 16999,
+//     camera: '12 mgpxl',
+//     isNew: false
+// };
 
-const keys = Object.keys(mobile);
+// const keys = Object.keys(mobile);
 
 // for (const [index, key] of keys.entries()) {
 //     console.log("Index =", index, "Key =", key, "Value =", mobile[key]);
 // }
 
-keys.forEach((key, index) => {
-    console.log("Key =", key, "", "index =", index, "", "Value =", mobile[key]);
-})
-// const keys = Object.keys(mobile);
+// keys.forEach((key, index) => {
+//     console.log("Key =", key, "", "index =", index, "", "Value =", mobile[key]);
+// })
+// // const keys = Object.keys(mobile);
 // console.log("=== Basic for loop ===");
 
 // for (let i = 0; i < keys.length; i++){
@@ -275,3 +275,33 @@ keys.forEach((key, index) => {
 // for (const key of mobile) {
 //   console.log(key);
 // }
+
+
+// const colors = {
+//     red: "#ff0000",
+//     green: "#00ff00",
+//     blue: "#0000ff",
+//     "golden rod": '#daa520'
+// };
+
+// for (const key in colors) {
+//     if (colors[key] === colors["golden rod"]) {
+//         console.log(colors[key]);
+//         break;
+//     }
+// }
+
+
+const car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020,
+}
+const keys = Object.keys(car);
+for (const key in keys) {
+    if (key.length) {
+        car['passenger capacity'] = 5;
+        break;
+    }
+}
+console.log(car);

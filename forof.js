@@ -22,7 +22,7 @@ for (const key of keys) {
     ? 'brand','price','camera','isNew'
 */
     
-    // console.log(typeof mobile[key]);
+    // console.log(mobile[key]);
 /*
     !Which types of things gives us:
     * this way we can access our OBJECT converted mobile array's values.
@@ -40,23 +40,16 @@ for (const key of keys) {
 
 let i = 0;
 for (const key of keys) {
-    // console.log(typeof i);
+    // console.log(i);
     // i++; //^ in this way we can actually access the index number like---> 0, 1, 2, 3...
 
 /*
     !Which types of things gives us:
     //* if we run a for...of loop in a an array that convert from OBJECT to ARRAY that time the key will give us objects's property names as a number based on the converted array's index. like ---> 0,1,2,3
-   
-   !Which types of dataTypes gives us:
-
-    & And the type of those values are all string. like ---> string,string,string,string.
-
-    ! OUTPUT
-    ? 'brand','price','camera','isNew'
 */
     
     
-    // console.log(key));
+    // console.log(key);
 /*
     !Which types of things gives us:
     * This way we can access our object property. Inside the for...of loop key gives us property name of a object based on index, because it provide us index of an object converted array like ---> brand,price,camera,isNew.
@@ -69,7 +62,7 @@ for (const key of keys) {
     ? 'brand','price','camera','isNew'
 */
     
-    console.log(mobile[key]);
+    // console.log(mobile[key]);
 /*
     !Which types of things gives us:
     * this way we can access our objects property's values.

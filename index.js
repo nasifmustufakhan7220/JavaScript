@@ -661,17 +661,39 @@
 //   job:        'teacher',
 //   friends: ['Michale', 'Peter', 'Steven'],
 //   hasDriverLicence: true,
-// ^  calcAge: function () {
-// ^    this.age = 2037 - this.birthYeah;
-// ^    return this['age'];
+//   calcAge: function () {
+//    this.age = 2037 - this.birthYeah;
+//     return this['age'];
 //   },
-// ^  jonasDetails: function () {
-// ^    this.details = `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriverLicence === true ? 'a' : 'no'} driver's license`;
-// ^    return this.details;
+//   jonasDetails: function () {
+//    this.details = `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriverLicence === true ? 'a' : 'no'} driver's license`;
+//    return this.details;
 //   }
 // };
 
-jonas.jonasDetails();
-console.log(jonas.details);
-console.log(jonas);
+// jonas.jonasDetails();
+// // console.log(jonas.details);
 // console.log(jonas);
+
+const mark ={
+    fullName : 'Mark Miller',
+    mass : 78,
+    height : 1.69,
+    calcBMI : function (){
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+const john = {
+    fullName : 'John Smith',
+    mass : 92,
+    height : 1.95,
+    calcBMI : function (){
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark, john);

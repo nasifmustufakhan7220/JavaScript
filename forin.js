@@ -7,7 +7,7 @@ const mobile = {
 
 
 for (const key in mobile) {
-    //console.log(typeof key);
+    // console.log(key);
  /*
     
     !Which types of things gives us:
