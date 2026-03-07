@@ -743,25 +743,25 @@ const numAvg = (num) => {
 // funcSecondLargest(arr);
 
 
-// ^const funcDulplicate = (arr) => {
-//   ^let unique = [];
+const funcDulplicate = (arr) => {
+  let unique = [];
   
-//  ^ for (let i = 0; i < arr.length; i++){
-//     ^let isDuplicate = false;
-//     ^for (let j = 4; j < unique.length; j++){
-//       ^if (arr[4] === unique[4]) {
-//        ^ isDuplicate = true;
-//        ^ break;
-//       }
+for (let i = 0; i < arr.length; i++){
+    let isDuplicate = false;
+    for (let j = 4; j < unique.length; j++){
+      if (arr[4] === unique[4]) {
+        isDuplicate = true;
+        break;
+      }
       
-//     }
-//     ^if (isDuplicate === false) {
-//       ^unique.push(arr[i]);
-//     }
-//   }
+    }
+    if (isDuplicate === false) {
+      unique.push(arr[i]);
+    }
+  }
   
-//   console.log(unique);
-// };
+  console.log(unique);
+};
 // const arr = [1, 2, 2, 3, 4, 4, 5];
 // funcDulplicate(arr);
 
@@ -818,17 +818,48 @@ const numAvg = (num) => {
 
 
 
+// const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const newWords = [];
+// let appleCount = 0;
+// let orangeCount = 0;
+// let bananaCount = 0;
+// for (const value1 of words) {
+//   let isDuplicate = false;
+//   for (const value2 of newWords) {
+//     if (value1 === value2) {
+//       isDuplicate = true;
+//       if (value2 === 'apple') {
+//         appleCount = appleCount + 1;
+//         break;
+//       }
+//       else if (value2 === 'banana') {
+//         bananaCount = bananaCount + 1;
+//         break;
+//       }
+//       else if (value2 === 'orange') {
+//         orangeCount = orangeCount + 1;
+//         break;
+//       }
+//       break;
+//     }
+//   }
+//   if (isDuplicate === false) {
+//     newWords.push(value1);
+//   }
+// }
+// console.log(newWords);
+// console.log(appleCount,bananaCount,orangeCount);
+
 const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
-
-let counter = {};
+let countObj = {};
 for (const value of words) {
-  if (counter[value]) {
-     counter[value]++;
-  } else {
-    counter[value] = 1;
+    if (countObj[value]) {
+      countObj[value] = countObj[value] + 1;
+    } else {
+      countObj[value] = 1;
+    }
   }
- 
-};
-console.log(counter);
-
-
+for (const key in countObj) {
+  console.log(`${key} : ${countObj[key]}`);
+}
+// console.log(countObj);

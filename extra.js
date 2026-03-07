@@ -297,11 +297,55 @@ const car = {
     model: "Corolla",
     year: 2020,
 }
-const keys = Object.keys(car);
-for (const key in keys) {
-    if (key.length) {
+
+for (const key in car) {
+    if (car[key] === car.year) {
         car['passenger capacity'] = 5;
-        break;
+    }
+    
+}
+// console.log(car);
+
+
+// const student = {
+//     name: "Hamim Sakep",
+//     id: 5421,
+//     physics: {
+//         subject: "HSC Physics",
+//         author: "Shahjahan Tapan",
+//         marks: 30
+//     }
+// };
+
+// for (const key in student) {
+//     if (student[key] === student['physics']) {
+         // console.log(student[key]);
+//     }
+// }
+
+let student = {
+    name: 'Ariana Grande',
+    age: 21,
+    city: 'Gaibandha',
+    isStudent: true
+};
+
+let count=0;
+for (const key in student) {
+    if (key) {
+        count = count+1;
     }
 }
-console.log(car);
+// console.log(count);
+
+
+// let myObject = {
+//     name: 'John Doe',
+//     age: 25,
+//     city: 'Example City',
+//     isStudent: true
+// };
+
+// for (const key in myObject) {
+//     console.log(`key: ${key} | type: ${typeof myObject[key]}`);
+// }
