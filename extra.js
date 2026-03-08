@@ -159,10 +159,10 @@
 
 //^ Array is a mutable dataType and String is a Immutable dataType. Because we easily chnage elements of an array, but we can not ever change any string elements. Here is the prove :
 
-const numbers = [22, 23, 556, 25, 26];
+// const numbers = [22, 23, 556, 25, 26];
 //console.log(numbers); // ^ [ 22, 23, 556, 25, 26 ]===> It is the original array's elements before chnaging .
 
-numbers[2] = 24;
+// numbers[2] = 24;
 
 //console.log(numbers); // ^ [ 22, 23, 24, 25, 26 ]======> It is the new array's elements after chaning it.
 
@@ -349,3 +349,65 @@ for (const key in student) {
 // for (const key in myObject) {
 //     console.log(`key: ${key} | type: ${typeof myObject[key]}`);
 // }
+
+const colors = ['red', 'blue', 'green', 'yellow', 'orange'];
+
+let newArr = [];
+for (const value of colors) {
+    // newArr.unshift(value);
+}
+// console.log(newArr);
+
+for (const key in colors) {
+    // newArr.unshift(colors[key]);
+}
+// console.log(newArr);
+
+for (let i = colors.length - 1; i >= 0; i--){
+    // newArr.push(colors[i]);
+}
+// console.log(newArr);
+
+
+const numbers = [12, 98, 5, 41, 23, 78, 46];
+
+for (const value of numbers) {
+    // console.log(value);
+    // if (value % 2 === 0) {
+    //     newArr.push(value);
+    // }
+}
+
+// console.log(newArr);
+
+for (const key in numbers) {
+    // console.log(numbers[key]);
+    // if (numbers[key] % 2 !== 1) {
+    //     newArr.push(numbers[key]);
+    // }
+}
+// console.log(newArr);
+
+for (let i = 0; i < numbers.length; i++){
+    // if (numbers[i] % 2 !== 1) {
+    //     newArr.push(numbers[i]);
+    // }
+}
+// console.log(newArr);
+
+let names = ['Tom', 'Tim', 'Tin', 'Tik'];
+let newStr = "";
+for (const value of names) {
+    // newStr = names.join("");
+}
+// console.log(newStr);
+
+const statement = 'I am a hard working person';
+
+for (const value of statement) {
+    // console.log(value);
+    newArr.unshift(value);
+    // newArr.join(",");
+}
+
+newArr.join("");
