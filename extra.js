@@ -403,11 +403,72 @@ for (const value of names) {
 // console.log(newStr);
 
 const statement = 'I am a hard working person';
+// console.log(statement.split(' ').reverse().join(' '));
+// let word = "";
+// for (const value of statement) {
+//     word += value;
+// }
+// console.log(word.split(' ').reverse().join(' '));
+// let reverse = "";
+// for (const value of statement) {
+//     reverse = value + reverse;
+// }
 
-for (const value of statement) {
-    // console.log(value);
-    newArr.unshift(value);
-    // newArr.join(",");
+// console.log(reverse);
+
+const arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
+for (let i = 0; i < arr.length; i++){
+    // console.log(arr[i]);
+    for (let j = 0; j < arr[i].length; j++){
+        if (i === 1 && j === 0) {
+            arr[i][j] = 99;
+        }
+    }
 }
+// console.log(arr);
+// arr[1][0] = 99;
 
-newArr.join("");
+// console.log(arr);
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(...fruits);
+
+
+// const number = [1, 2, 3];
+// const num = [...number];
+// for (let i = 0; i < num.length; i++){
+//     if (i === 0) {
+//         num[i] = 99;
+//     }
+// }
+// let i = 0;
+// for (const value of num) {
+    // console.log(num[i]);
+//     if (i === 0) {
+//         num[i] = 99;
+//     }
+//     i++;
+// }
+
+
+// console.log(number);
+// console.log(num);
+
+const students = [
+    { name: "John", marks: 85 },
+    { name: "Alice", marks: 90 }
+];
+
+for (const value of students) {
+    // console.log(value);
+    for (const key in value) {
+        // console.log(value[key]);
+        // console.log(value.name);
+        console.log(`${value['name']} scored ${value['marks']}`);
+        break;
+    }
+}
