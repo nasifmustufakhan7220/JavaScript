@@ -409,12 +409,12 @@ const statement = 'I am a hard working person';
 //     word += value;
 // }
 // console.log(word.split(' ').reverse().join(' '));
-// let reverse = "";
-// for (const value of statement) {
-//     reverse = value + reverse;
-// }
+let reverse = "";
+for (const value of statement) {
+    reverse = value + reverse;
+}
 
-// console.log(reverse);
+console.log(reverse);
 
 const arr = [
     [1, 2],
@@ -468,7 +468,7 @@ for (const value of students) {
     for (const key in value) {
         // console.log(value[key]);
         // console.log(value.name);
-        console.log(`${value['name']} scored ${value['marks']}`);
+        //console.log(`${value['name']} scored ${value['marks']}`);
         break;
     }
 }
