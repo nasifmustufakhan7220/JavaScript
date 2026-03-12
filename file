@@ -1,9 +1,9 @@
-trim();
-toLowerCase() / toUpperCase();
-includes();
+// trim();
+// toLowerCase() / toUpperCase();
+// includes();
 // split();
 // concat();
-replace() / replaceAll();
+// replace() / replaceAll();
 slice();
-length();
+// length();
 startsWith() / endsWith();

@@ -124,11 +124,75 @@
 
 // console.log(add);
 
-const sentence = "apple banana mango";
+// const sentence = "apple banana mango";
 
-let sentenceArr = sentence.split(" ");
-let add = [];
-for (const value of sentenceArr) {
-    add.push(value.toUpperCase());
-}
-console.log(add);
+// let sentenceArr = sentence.split(" ");
+// let add = [];
+// for (const value of sentenceArr) {
+//     add.push(value.toUpperCase());
+// }
+// console.log(add);
+
+
+// let text = "Hello world, welcome to the universe.";
+// console.log(text.includes('the'));
+
+// let result = text.includes("","welcome");
+// console.log(result);
+
+// let result = text.replace("Hello", "Hi");
+// let text = "Mr Blue has a blue house and a blue car";
+// let result = text.replace('blue', "red");
+// console.log(result);
+
+// let emoji = '😂😂'
+// let result = emoji.split(/(?:)/);
+// let result = emoji.split(/(?:)/u);
+// console.log(result);
+
+// const emptyString = "";
+// console.log(emptyString.split("a"));
+// console.log(emptyString.split(emptyString));
+
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// let results = paragraph.replace("Ruth's", "my");
+// const regex = /dog/i;
+// let result = paragraph.replace(regex, "ferret");
+
+// let text = "foo";
+// let result = text.replace(/(f)/, "$2");
+// console.log(result);
+
+
+
+// const replacer = (match, p1, p2, p3, offset, string) => {
+//     return [p1, p2, p3].join('-');
+// }
+
+// const newString = "abc12345#$*%";
+
+// let result = newString.replace(/(\D*)(\d*)(\W*)/, replacer);
+// console.log(result);
+
+// const re = /(\w+)\s(\w+)/;
+// const str = "Maria Cruz Alo";
+// const newStr = str.replace(re, "$3, $2, $1");
+// console.log(newStr);
+
+
+// let text = "Mr Blue has a blue house and a blue car";
+
+// let result = text.replace(/blue/gi, 'red');
+
+// console.log(result);
+
+
+// let text = "Mr Blue has a blue house and a blue car";
+
+// let result = text.replace(/blue|house|car/gi, function (x) {
+//     return x.toUpperCase();
+// });
+
+// console.log(result);
+
