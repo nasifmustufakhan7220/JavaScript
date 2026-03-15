@@ -414,21 +414,21 @@ for (const value of statement) {
     reverse = value + reverse;
 }
 
-console.log(reverse);
+// console.log(reverse);
 
-const arr = [
-    [1, 2],
-    [3, 4],
-    [5, 6]
-];
-for (let i = 0; i < arr.length; i++){
+// const arr = [
+//     [1, 2],
+//     [3, 4],
+//     [5, 6]
+// ];
+// for (let i = 0; i < arr.length; i++){
     // console.log(arr[i]);
-    for (let j = 0; j < arr[i].length; j++){
-        if (i === 1 && j === 0) {
-            arr[i][j] = 99;
-        }
-    }
-}
+    // for (let j = 0; j < arr[i].length; j++){
+        // if (i === 1 && j === 0) {
+            // arr[i][j] = 99;
+        // }
+    // }
+// }
 // console.log(arr);
 // arr[1][0] = 99;
 
@@ -458,17 +458,59 @@ for (let i = 0; i < arr.length; i++){
 // console.log(number);
 // console.log(num);
 
-const students = [
-    { name: "John", marks: 85 },
-    { name: "Alice", marks: 90 }
-];
+// const students = [
+//     { name: "John", marks: 85 },
+//     { name: "Alice", marks: 90 }
+// ];
 
-for (const value of students) {
+// for (const value of students) {
     // console.log(value);
-    for (const key in value) {
+    // for (const key in value) {
         // console.log(value[key]);
         // console.log(value.name);
         //console.log(`${value['name']} scored ${value['marks']}`);
-        break;
+        // break;
+    // }
+// }
+
+
+const multiply = (num1, num2, num3, num4) => {
+    const result = num1 * num2 * num3 * num4;
+    return result;
+};
+
+const multiplyDivide = (number) => {
+    if (number % 2 === 1) {
+        return number * 2;
+    } else {
+        return number / 2;
     }
 }
+
+
+const make_avg = (numbers, length) => {
+    let sum = 0;
+    for (const value of numbers) {
+        sum += value;
+    }
+    let avg = sum / length;
+    return avg;
+}
+
+const count_zero = (binaryString) => {
+    let count = 0;
+    for (let i = 0; i < binaryString.length; i++){
+        if (binaryString[i] === "0") count++;
+    }
+    return count;
+}
+
+
+const odd_even = (number) => {
+    if (number % 2 === 0) return "Even";
+    else return "Odd";
+}
+// const arr = [55, 57, 20, 10, 14];
+// let arrlength = arr.length;
+let res = odd_even(0);
+console.log(res);
