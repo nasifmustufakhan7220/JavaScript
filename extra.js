@@ -513,4 +513,41 @@ const odd_even = (number) => {
 // const arr = [55, 57, 20, 10, 14];
 // let arrlength = arr.length;
 let res = odd_even(0);
-console.log(res);
+// console.log(res);
+
+
+const milesKm = (mile) => {
+    const kilo = mile * 1.60934;
+    const result = `${mile} is eqaul to ${kilo} km`;
+    return result;
+};
+
+const kmMiles = (kilo) => {
+    const mile = kilo / 1.609;
+    const result = `${kilo.toFixed(2)} km is eqaul to ${mile.toFixed(2)} mile`;
+    return result;
+}
+
+
+// ^A year is a leap year if it is divisible by 4, unless it is divisible by 100 but not by 400. In essence, add a day (Feb 29) to years divisible by 4, skip it for century years (e.g., 1900) unless they are divisible by 400 (e.g., 2000). This ensures a 366-day year for accuracy.
+
+const leapYear = (year) => {
+    let result;
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                result = `${year} is a leap year`;
+            }else {
+                result = `${year} is not a leap year`;
+            }
+        } else {
+            result = `${year} is a leap year`;
+        }
+    } else {
+        result = `${year} is not a leap year`;
+    }
+    return result;
+}
+
+const year = leapYear(2012);
+console.log(year);
