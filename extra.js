@@ -549,5 +549,41 @@ const leapYear = (year) => {
     return result;
 }
 
-const year = leapYear(2012);
-console.log(year);
+const oddAvg = (arr) => {
+    const length = arr.length;
+    let sum = 0;
+    let avg;
+    for (const value of arr) {
+        // console.log(value);
+        if (value % 2 !== 0) {
+            // console.log(value);
+            sum += value;
+        }
+    }
+    avg = sum / length;
+    return avg;
+}
+
+
+const removeDupli = (arr) => {
+    let newArr = [];
+    let exits = false;
+    for (const value of arr) {
+        // if (!newArr.includes(value)) {
+        //     newArr.push(value);
+        // }
+        for (let i = 0; i < newArr.length; i++){
+            if (value === newArr[i]) {
+                exits = true;
+                break;
+            }
+        }
+        if (!exits) {
+            newArr.push(value);
+        }
+    }
+    return newArr;
+}
+
+const number = ['abul', 'kabul', 'bulbul', 'abul', 'kabul'];
+console.log(removeDupli(number));
