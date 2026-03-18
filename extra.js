@@ -585,5 +585,42 @@ const removeDupli = (arr) => {
     return newArr;
 }
 
-const number = ['abul', 'kabul', 'bulbul', 'abul', 'kabul'];
-console.log(removeDupli(number));
+
+
+const fahrenheitConvert = (celsius) => {
+    const formula = (celsius * 1.8) + 32;
+    let result = `The temperature is ${celsius} celsius, and the converted temperature is ${formula} fahrenheit`;
+    return result;
+}
+
+const findRepeated = (arr) => {
+    let num = 25;
+    let count = 0;
+    for (const value of arr) {
+        if (num === value) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+const vowelCount = (str) => {
+    let count = 0;
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    for (const value of vowels) {
+        for (const value1 of str) {
+            if (value === value1) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+const longestWord = (str) => {
+    
+}
+const string = 'I am learning Programming to become a programmer';
+console.log(longestWord(string));
+
