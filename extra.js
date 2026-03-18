@@ -622,5 +622,6 @@ const longestWord = (str) => {
     
 }
 const string = 'I am learning Programming to become a programmer';
+// obboshoi ek ekta word er length onujaye kontate beshi length oi unujaye ber korbo.
 console.log(longestWord(string));
 
