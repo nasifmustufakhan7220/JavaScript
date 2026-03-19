@@ -621,7 +621,69 @@ const vowelCount = (str) => {
 const longestWord = (str) => {
     
 }
-const string = 'I am learning Programming to become a programmer';
+
 // obboshoi ek ekta word er length onujaye kontate beshi length oi unujaye ber korbo.
-console.log(longestWord(string));
+
+
+
+const largestWord = (newArr) => {
+    let largestWord="";
+    for (const value of newArr) {
+        if (largestWord.length < value.length) {
+            largestWord = value;
+        }
+    }
+    return largestWord;
+}
+const string = 'I am learning Programming to become a programmer';
+const arr = string.split(' ');
+
+
+
+const randomNumber = (start,max) => {
+    const num1 = Math.floor(Math.random()* (max - start + 1)) + start;
+    return num1;
+}
+
+
+const getMax = (obj) => {
+    let max = -Infinity;
+    let names = ""
+    for (const key in obj) {
+        // console.log(key, obj[key]);
+        if (obj[key] > max) {
+            names = key;
+            max = obj[key];
+        }
+    }
+    let result = `The delecious cake will take ${names} and his point is ${max}`;
+    return result;
+}
+const maxObj = {
+    tmi: 98,
+    kim: 100,
+    pim: 200,
+    dim: 854
+}
+
+
+const num = [10.4, 5.6, 7.2, 9.8, 5.3, 6.4];
+const findTallest = (arr) => {
+    let tall = -Infinity;
+    let small = -Infinity;
+    for (const value of arr) {
+        if (value > tall) {
+            small = tall;
+            tall = value;
+        }
+
+        if (value > small && value < tall) {
+            small = value;
+        }
+    }
+    
+    return `${tall} ${small}`;
+}
+
+console.log(findTallest(num));
 
