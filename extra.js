@@ -677,7 +677,7 @@ const findTallest = (arr) => {
             tall = value;
         }
 
-        if (value > small && value < tall) {
+        if (value > small && tall > value) {
             small = value;
         }
     }
@@ -685,5 +685,67 @@ const findTallest = (arr) => {
     return `${tall} ${small}`;
 }
 
-console.log(findTallest(num));
+
+
+const priceCount = (shirtQuantity, pantQuantity, shoeQuantity) => {
+    const perShirtPrice = 500;
+    const perPantPrice = 400;
+    const perShoePrice = 900;
+
+    const shirt = shirtQuantity * perShirtPrice;
+    const pant = pantQuantity * perPantPrice;
+    const shoe = shoeQuantity * perShoePrice;
+
+    const total = shirt + pant + shoe;
+    return total;
+}
+
+
+const getMin = (prices) => {
+    let min = prices[0].price;
+    let names = "";
+    for (const value of prices) {
+        for (const key in value) {
+            if (min > value[key]) {
+                min = value[key];
+                names = value['brand'];
+            }
+        }
+    }
+    return `The brand name is ${names}, which is the lowest price ${min}, but works really fine 😍`;
+}
+
+const prices = [
+  { brand: "oppoA6", price: 5000 },
+  { brand: "shawmi", price: 20000 },
+  { brand: "realme", price: 18500 },
+  { brand: "honor", price: 30000 },
+  { brand: "oppo", price: 25000 },
+  { brand: "oppoS6", price: -5000 },
+  { brand: "oppoSss6", price: 4000 },
+];
+
+
+
+const shoppingCart = (product) => {
+    let sum = 0;
+    let names = "";
+    for(const value of product){
+        for (const key in value) {
+            if (key === 'price') {
+                const price = value.price * value.quantity;
+                sum += price;
+                names += `${value.name}  ${value.price} * ${value.quantity} `
+            }
+        }
+    }
+    return `The total of the product's (${names}) price is = ${sum} Tk.`;
+}
+const products = [
+    {name: 'shampoo', price: 300, quantity: 2},
+    {name: 'cheruni', price: 100, quantity: 3},
+    {name: 'shirt', price: 300, quantity: 1},
+    {name: 'pant', price: 300, quantity: 3},
+];
+console.log(shoppingCart(products));
 
