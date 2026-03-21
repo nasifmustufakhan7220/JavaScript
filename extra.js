@@ -815,9 +815,30 @@ const discount = (quantity) =>{
 
 
 const discountCheap = (quantity) => {
+    let total = [];
     for (const value of quantity) {
-        console.log(value);
+        for (const key in value) {
+            if (key === 'quantity') {
+                if (value['quantity'] <= 100) {
+                    total.push(`For first100Quantity ${value['quantity'] * value['price']}`);
+                }
+                else if (value['quantity'] <= 200) {
+                    const first100Quantity = value['quantity'] * value['price'];
+                    const remainingQuantity = value['quantity'] - 100;
+                    const remainingTotal = remainingQuantity * (value['price'] * 0.90);
+                    total.push(`For second100Quantity ${first100Quantity + remainingTotal}`);
+                }
+                else {
+                    const first100Quantity = value['quantity'] * 100;
+                    const second100Quantity = value['quantity'] * 0.90;
+                    const remainingQuantity = value['quantity'] - 200;
+                    const remainingTotal = remainingQuantity * (value['price'] * 0.70);
+                    total.push(`For above200Quantity ${ first100Quantity + second100Quantity + remainingTotal}`);
+                }
+            }
+        }
     }
+    return total;
 }
 const item = [
     {name: 'shampoo', price: 300, quantity: 52},
@@ -826,5 +847,5 @@ const item = [
     {name: 'pant', price: 300, quantity: 250},
 ];
 
-console.log(discount(5));
+console.log(discountCheap(item));
 
