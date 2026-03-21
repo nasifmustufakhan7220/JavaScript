@@ -747,5 +747,84 @@ const products = [
     {name: 'shirt', price: 300, quantity: 1},
     {name: 'pant', price: 300, quantity: 3},
 ];
-console.log(shoppingCart(products));
+
+
+
+const disCountCupon = (items) => {
+    let sum = 0;
+    let price;
+    for (const value of items) {
+        for (const key in value) {
+            if (key === 'price') {
+                if (value.price <= 100) {
+                    price = value.price * value.quantity;
+                    sum += price;
+                    break;
+                } else if (value.price <= 200) {
+                    let disCount = value.price * 0.90;
+                    price = disCount * value.quantity;
+                    sum += price;
+                    break;
+                } else {
+                    let discountAgin = value.price * 0.70;
+                    price = discountAgin * value.quantity;
+                    sum += price;
+                    break;
+                }
+            }
+        }
+    }
+    return sum;
+}
+
+const items = [
+    {name: 'shampoo', price: 300, quantity: 2},
+    {name: 'cheruni', price: 100, quantity: 3},
+    {name: 'shirt', price: 300, quantity: 1},
+    {name: 'pant', price: 300, quantity: 3},
+    {name: 'shock', price: 150, quantity: 2},
+];
+
+
+
+const discount = (quantity) =>{
+    const first100Price = 100;
+    const second100Price = 90;
+    const above200Price = 70;
+
+    if(quantity <= 100){
+        const total = quantity * first100Price;
+        return total; 
+    }
+    else if(quantity <= 200){
+        const first100Total = 100 * first100Price;
+        const remainingQuantity = quantity - 100;
+        const remainingTotal = remainingQuantity * second100Price;
+        const total = first100Total + remainingTotal;
+        return total;
+    }
+    else{
+        const first100Total = 100 * first100Price;
+        const second100Total = 100 * second100Price;
+        const remainingQuantity = quantity - 200;
+        const remainingTotal = remainingQuantity * above200Price;
+        const total = first100Total + second100Total + remainingTotal;
+        return total;
+    }
+}
+
+
+const discountCheap = (quantity) => {
+    for (const value of quantity) {
+        console.log(value);
+    }
+}
+const item = [
+    {name: 'shampoo', price: 300, quantity: 52},
+    {name: 'cheruni', price: 100, quantity: 30},
+    {name: 'shirt', price: 300, quantity: 150},
+    {name: 'pant', price: 300, quantity: 250},
+];
+
+console.log(discount(5));
 
