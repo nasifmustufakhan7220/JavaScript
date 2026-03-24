@@ -847,5 +847,109 @@ const item = [
     {name: 'pant', price: 300, quantity: 250},
 ];
 
-console.log(discountCheap(item));
+
+const addition = (a, b) => {
+    const sum = a + b;
+    return sum;
+}
+
+const subtraction = (a, b) => {
+    const sub = a - b;
+    return sub;
+}
+
+const multiplication = (a, b) => {
+    const mul = a * b;
+    return mul;
+}
+
+const divide = (a, b) => {
+    const div = a / b;
+    return div;
+}
+const calculation = (a, b, oparation) => {
+    if (oparation === 'addition') {
+        const result = addition(a, b);
+        return result;
+    }
+    else if (oparation === 'subtraction') {
+        const result = subtraction(a, b);
+        return result;
+    }
+    else if (oparation === 'multiplication') {
+        const result = subtraction(a, b);
+        return result;
+    }
+    else if (oparation === 'divide') {
+        const result = subtraction(a, b);
+        return result;
+    }
+    else {
+        const result = "Invalid oparation";
+        return result;
+    }
+}
+
+
+
+
+const findLowest = (arr) => {
+    let min = arr[0];
+    for (const value of arr) {
+        if (min > value) {
+            min = value;
+        }
+    }
+    return min;
+}
+
+const array = [167, 190, 120, 165, 137];
+
+
+const smallestName = (arr) => {
+    let smallName = arr[0];
+    for (const value of arr) {
+        if (smallName.length > value.length) {
+            smallName = value;
+        }
+    }
+    return smallName;
+}
+
+const nam = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];
+
+
+const calculateElectronicsBudget  = (leptopCount, tabletCount, mobileCount) => {
+    const laptop = 35000 * leptopCount;
+    const tablet = 15000 * tabletCount;
+    const mobile = 20000 * mobileCount;
+
+    const total = laptop + tablet + mobile;
+
+    return total;
+}
+
+const sum = calculateElectronicsBudget(2, 1, 3);
+
+
+const findAveragePhonePrice = (phone, PhoneACount, PhoneBCount, PhoneCCount, PhoneDCount, PhoneDCount, PhoneFCount) => {
+    for (const value of phone) {
+        for (const key in value) {
+            if (key === 'price') {
+                // const a = 
+            }
+        }
+    }
+}
+
+    const phones = [
+        { model: "PhoneA", brand: "Iphone", price: 95000 },
+        { model: "PhoneB", brand: "Samsung", price: 40000 },
+        { model: "PhoneC", brand: "Oppo", price: 26000 },
+        { model: "PhoneD", brand: "Nokia", price: 35000 },
+        { model: "PhoneE", brand: "Iphone", price: 105000 },
+        { model: "PhoneF", brand: "HTC", price: 48000 },
+    ];
+
+console.log(findAveragePhonePrice(phones));
 
