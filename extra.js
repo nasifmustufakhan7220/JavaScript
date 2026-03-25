@@ -932,14 +932,30 @@ const calculateElectronicsBudget  = (leptopCount, tabletCount, mobileCount) => {
 const sum = calculateElectronicsBudget(2, 1, 3);
 
 
-const findAveragePhonePrice = (phone, PhoneACount, PhoneBCount, PhoneCCount, PhoneDCount, PhoneDCount, PhoneFCount) => {
+const findAveragePhonePrice = (phone) => {
+    let result = [];
+    let total = 0;
+    let avg;
     for (const value of phone) {
         for (const key in value) {
             if (key === 'price') {
-                // const a = 
+                if (value.price <= 35000) {
+                    result.push( value['price']);
+                }
+                else if (value['price'] <= 95000) {
+                    result.push(value['price'] * 0.25);
+                }
+                else if (value['price'] <= 200000) {
+                    result.push(value['price'] * 0.40);
+                }
             }
         }
     }
+    for (const value of result) {
+        total += value;
+    }
+    avg = total / result.length;
+    return avg.toFixed(2);
 }
 
     const phones = [
@@ -951,5 +967,96 @@ const findAveragePhonePrice = (phone, PhoneACount, PhoneBCount, PhoneCCount, Pho
         { model: "PhoneF", brand: "HTC", price: 48000 },
     ];
 
-console.log(findAveragePhonePrice(phones));
+
+
+
+const salaryCount = (employe) => {
+    let currentSalary = [];
+    let total = 0;
+
+    for (const value of employe) {
+        for (const key in value) {
+            if (key === 'name') {
+                currentSalary.push((value.increment * value.experience) + value.starting);
+                break;
+            }
+        }
+    }
+    for (const value of currentSalary) {
+        total += value;
+    }
+    return total;
+}
+
+ const employees = [
+    { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+    { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+    { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+    { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const cashOut = (money) => {
+    if (typeof money !== 'number' || money < 0) {
+        return `Invalid String`;
+    }
+    let cashoutCharge = 1.75;
+    let totalCashOut = money * cashoutCharge/100;
+    return totalCashOut;
+}
+const number = 999;
+
+
+/*
+!Input:
+*তোমার ফাংশন একটি email ইনপুট নেবে যা হবে একটি স্ট্রিং।
+&​Output:
+*তোমার ফাংশন টি একটা boolean Value (true/false) কে return করবে। অবশ্যই তোমাকে কিন্তু boolean value ই return করতে হবে।
+!​Note: তোমাকে অবশ্যই output টা রিটার্ন করতে হবে। console.log করলে কোন মার্ক পাবেনা
+^​Challenge:
+!যদি ইনপুট টি string না হয় তাহলে "Invalid" স্ট্রিং রিটার্ন করবে।
+
+
+* "ferdous@gmail.com" true
+* "1zihad@gmail.com" true
+* "-king@yahoo.com" false
+* ["jhankar@hero.com"] "Invalid"
+* "Mewo@cat.com" true
+* "programming-hero.com" false
+* "chat420@gpt.net" false
+* true "Invalid"
+*/
+
+const validEmail = (email) => {
+    const pattern = /^[-._+@]/;
+    const forbiddenPattern = /[-._+]/;
+        if (typeof email !== 'string') {
+            return "Invalid";
+        }
+        else if (pattern.test(email.charAt(0)) || email.includes(" ") || forbiddenPattern.test(email)) {
+            return false;
+        }
+        else if(email.includes("@") && email.lastIndexOf('.com')){
+            return true;
+        } else {
+            return false;
+        }
+
+}
+const emails = "programming-hero.com";
+console.log(validEmail(emails));
 
