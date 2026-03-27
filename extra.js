@@ -1021,42 +1021,79 @@ const cashOut = (money) => {
 const number = 999;
 
 
-/*
-!Input:
-*তোমার ফাংশন একটি email ইনপুট নেবে যা হবে একটি স্ট্রিং।
-&​Output:
-*তোমার ফাংশন টি একটা boolean Value (true/false) কে return করবে। অবশ্যই তোমাকে কিন্তু boolean value ই return করতে হবে।
-!​Note: তোমাকে অবশ্যই output টা রিটার্ন করতে হবে। console.log করলে কোন মার্ক পাবেনা
-^​Challenge:
-!যদি ইনপুট টি string না হয় তাহলে "Invalid" স্ট্রিং রিটার্ন করবে।
-
-
-* "ferdous@gmail.com" true
-* "1zihad@gmail.com" true
-* "-king@yahoo.com" false
-* ["jhankar@hero.com"] "Invalid"
-* "Mewo@cat.com" true
-* "programming-hero.com" false
-* "chat420@gpt.net" false
-* true "Invalid"
-*/
 
 const validEmail = (email) => {
     const pattern = /^[-._+@]/;
-    const forbiddenPattern = /[-._+]/;
+    const forbiddenPattern = /[-_+]/;
         if (typeof email !== 'string') {
             return "Invalid";
         }
         else if (pattern.test(email.charAt(0)) || email.includes(" ") || forbiddenPattern.test(email)) {
             return false;
         }
-        else if(email.includes("@") && email.lastIndexOf('.com')){
+        else if(email.includes("@") && email.endsWith('.com')){
             return true;
         } else {
             return false;
         }
 
 }
-const emails = "programming-hero.com";
-console.log(validEmail(emails));
+const emails = "-king@yahoo.com";
+
+
+
+
+/*
+!Input:
+*তোমার ফাংশনটি ইনপুট নেবে One Array and the elements of array's will be স্ট্রিং।
+^ Example : ['mango', 'banana', "Na-Vote", "mango"];
+&​Output:
+* If the array will contain more mango than others, it will return mango.
+* If the array will contain more banana than others, it will return banana.
+* If the array will contain same weights of mango and banana than, it will return "Draw".
+!​Note: তোমাকে অবশ্যই output টা রিটার্ন করতে হবে। console.log করলে কোন মার্ক পাবেনা
+^​Challenge:
+! যদি ইনপুট টি Array না হয় তাহলে "Invalid" স্ট্রিং রিটার্ন করবে।
+
+^ ["mango", "banana", "mango", "banana", "mango"]  "Mango"
+^ [] "Draw"
+^ ["mango", "banana", "jaker party", "no"] "Draw"
+^ ["mango"] "Mango"
+^ ["banana", "banana", "age e valo chilam", "no"] "Banana"
+^ {result: "mango , banana , mango"}
+^ "mango , banana" "Invalid"
+^ ["mango", "BananA", "na vote", "na vote"] "Mango"
+
+*/
+
+
+const electionResult = (array) => {
+    let mango = 0;
+    let banana = 0;
+    if (Array.isArray(array) === false) {
+        return "Invalid String";
+    }
+    for (const value of array) {
+        if (value === "mango") {
+            mango++;
+        }
+        else if (value === "banana") {
+            banana++;
+        }
+    }
+    if (mango > banana) {
+        return "mango"
+    }
+    else if (banana > mango) {
+        return "banana"
+    }
+    else if (mango === banana) {
+        return "Draw";
+    }
+};
+
+const elc = ["mango", "BananA", "na vote", "na vote"];
+
+
+console.log(electionResult(elc));
 
