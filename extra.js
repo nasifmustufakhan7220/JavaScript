@@ -1041,39 +1041,13 @@ const validEmail = (email) => {
 const emails = "-king@yahoo.com";
 
 
-
-
-/*
-!Input:
-*তোমার ফাংশনটি ইনপুট নেবে One Array and the elements of array's will be স্ট্রিং।
-^ Example : ['mango', 'banana', "Na-Vote", "mango"];
-&​Output:
-* If the array will contain more mango than others, it will return mango.
-* If the array will contain more banana than others, it will return banana.
-* If the array will contain same weights of mango and banana than, it will return "Draw".
-!​Note: তোমাকে অবশ্যই output টা রিটার্ন করতে হবে। console.log করলে কোন মার্ক পাবেনা
-^​Challenge:
-! যদি ইনপুট টি Array না হয় তাহলে "Invalid" স্ট্রিং রিটার্ন করবে।
-
-^ ["mango", "banana", "mango", "banana", "mango"]  "Mango"
-^ [] "Draw"
-^ ["mango", "banana", "jaker party", "no"] "Draw"
-^ ["mango"] "Mango"
-^ ["banana", "banana", "age e valo chilam", "no"] "Banana"
-^ {result: "mango , banana , mango"}
-^ "mango , banana" "Invalid"
-^ ["mango", "BananA", "na vote", "na vote"] "Mango"
-
-*/
-
-
-const electionResult = (array) => {
+const electionResult = (votes) => {
     let mango = 0;
     let banana = 0;
-    if (Array.isArray(array) === false) {
+    if (Array.isArray(votes) === false) {
         return "Invalid String";
     }
-    for (const value of array) {
+    for (const value of votes) {
         if (value === "mango") {
             mango++;
         }
@@ -1095,5 +1069,78 @@ const electionResult = (array) => {
 const elc = ["mango", "BananA", "na vote", "na vote"];
 
 
-console.log(electionResult(elc));
+const isBestFriend = (friend1, friend2) => {
+    if (typeof friend1 !== 'object' || typeof friend2 !== 'object') {
+        return 'Invalid String';
+    }
+    for (const key in friend1) {
+        for (const key1 in friend2) {
+            if (friend1.bestFriend === friend2.roll && friend2.bestFriend === friend1.roll) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+}
+
+const frnd1 = { name: "hashem", roll: 1, bestFriend: 2 }; 
+const frnd2 = { name: "kashem", roll: 2, bestFriend: 1 };
+
+
+const calculateWatchTime = (times) => {
+    if (!Array.isArray(times)) {
+        return "Invalid String"
+    }
+    let sum = 0;
+    for (const value of times) {
+        if (typeof value !== 'number') {
+            return "Invalid String";
+        }
+        sum += value;        
+    }
+    let hours = Math.floor(sum / 3600);
+    let minutes = Math.floor((sum % 3600) / 60);
+    let seconds = sum % 60;
+    return `{hour: ${hours}, minute: ${minutes}, second: ${seconds} }`
+}
+const time = [100, 99, 119, 300];
+
+const calculateVate = (amount) => {
+    if (amount < 0 || typeof amount !== 'number') {
+        return "Invalid";
+    }
+    const vat = amount * 7.5 / 100;
+    return vat;
+}
+const price = "foo";
+
+const validContact = (number) => {
+    if (typeof number !== 'string') {
+        return "Invalid";
+    }
+    else if (number.length !== 11) {
+        return false;
+    }
+    else if (number.startsWith("01") && !number.includes(" ")) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+const phoneNumber = true;
+
+
+
+const willSuccess = (marks) => {
+    if (!Array.isArray(marks)) {
+        return "Invalid";
+    }
+}
+
+const nums = [55, 75, 41, 33, 0, 87, 91, 30];
+console.log(willSuccess(nums));
 
