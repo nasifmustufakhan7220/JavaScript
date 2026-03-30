@@ -1136,11 +1136,80 @@ const phoneNumber = true;
 
 
 const willSuccess = (marks) => {
+    let pass = 0;
+    let fail = 0;
     if (!Array.isArray(marks)) {
         return "Invalid";
     }
+    for (const value of marks) {
+        if (value >= 50) {
+            pass++;
+        }
+        else {
+            fail++;
+        }
+    }
+
+    if (pass > fail) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
-const nums = [55, 75, 41, 33, 0, 87, 91, 30];
-console.log(willSuccess(nums));
+const nums = 90;
+
+
+
+
+const validProposal = (obj1, obj2) => {
+    if(typeof obj1 !== 'object' || typeof obj2 !== 'object' || obj1 === null || obj2 === null || Array.isArray(obj1) || Array.isArray(obj2)){
+        return "Invalid";
+    }
+
+    const keys = new Set([...Object.keys(obj1), ...Object.keys(obj2)]);
+    for (const value of keys) {
+        if(obj1['gender'] !== obj2['gender']){
+            if(Math.abs(obj1['age'] - obj2['age']) <= 7){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+}
+
+const person1 = {
+    name: "Rahul", gender: 'male', age: 24
+};
+const person2 = {
+    name: "Joya", gender: 'female', age: 32
+};
+
+const calculateSleepTime = (times) =>{
+    if(!Array.isArray(times)){
+        return "Invalid";
+    }
+    let sum = 0;
+
+    for(const value of times){
+        if(typeof value !== 'number'){
+            return "Invalid";
+        }
+        sum += value;
+    }
+    const hours = Math.floor(sum / 3600);
+    const minutes = Math.floor((sum % 3600) / 60);
+    const seconds = sum % 60;
+    return `{hours : ${hours}, minute: ${minutes}, second: ${seconds}`;
+}
+
+const timeC = [1000, 38000, '900'];
+console.log(calculateSleepTime(time));
+
 
