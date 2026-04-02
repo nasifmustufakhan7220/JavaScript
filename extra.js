@@ -1210,6 +1210,5 @@ const calculateSleepTime = (times) =>{
 }
 
 const timeC = [1000, 38000, '900'];
-console.log(calculateSleepTime(time));
 
 
