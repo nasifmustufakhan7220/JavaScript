@@ -196,3 +196,25 @@
 
 // console.log(result);
 
+// Remove all spaces (EveryWhere)
+
+const str = "Hello    World   Again";
+//? 1. Remove ALL Spaces (Everywhere) :Using replace() / replaceAll() with Regex:
+//? const result = str.replaceAll(/ /g, '');
+
+//! 2. Remove ALL Spaces (Everywhere) : Using split() and join()
+//! const result = str.split(' ').join('');
+
+//* 3. Remove All Whitespace (Tabs, Newlines, etc.)
+//* const result = str.replace(/\s/g, '');
+
+
+//& 4. Replace Multiple Spaces with a Single Space
+//& const result = str.replace(/\s+/g, ' ');
+
+
+
+const num = " ha   ck m e 1 @ru.c n   ";
+const result = num.replaceAll(/[\s\d]/g, '');
+
+console.log(result);

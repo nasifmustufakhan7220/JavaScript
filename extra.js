@@ -1210,6 +1210,76 @@ const calculateSleepTime = (times) =>{
 }
 
 const timeC = [1000, 38000, '900'];
-console.log(calculateSleepTime(time));
+
+
+const totalFine = (fare) => {
+    if (fare <= 0 || typeof fare !== 'number') {
+        return "Invalid";
+    }
+    else {
+        const totalFine = fare + (fare * 0.20) + 30;
+
+        return totalFine;
+    }
+}
+
+const amount = true;
+
+
+
+const onlyCharacter = (str) => {
+    if (typeof str !== "string") {
+        return "Invalid";
+    }
+    else {
+        const remover = str.replaceAll(/[\s]/g, '').toUpperCase();
+        return remover;
+    }
+}
+
+const str = " ha ck m e 1 @ru.c n ";
+
+
+const bestTeam = (player1, player2) => {
+    let scoreA = 0;
+    let scoreB = 0;
+    const expectedTypes = {
+        name: "string",
+        foul: "number",
+        cardY: "number",
+        cardR: "number"
+    };
+    if (typeof player1 !== "object" || typeof player2 !== "object") {
+        return "Invalid";
+    }
+    for (const key in expectedTypes) {
+        if (typeof player1[key] !== expectedTypes[key] || typeof player2[key] !== expectedTypes[key]) {
+            return "Invalid";
+        }
+    }
+
+    for (const key in player1) {
+        if (player1['name']) {
+            scoreA = player1['foul'] + player1['cardY'] + player1['cardR'];
+        }
+        if (player2['name']) {
+            scoreB = player2['foul'] + player2['cardY'] + player2['cardR'];
+        }
+    }
+
+    if (scoreA < scoreB) {
+        return player1['name'];
+    }
+    else if (scoreB < scoreA) {
+        return player2['name'];
+    }
+    else if (scoreA === scoreB) {
+        return "Tie";
+    }
+}
+
+const obj1 = {name: "Germany", foul: 10, cardY: 1, cardR: 1};
+const obj2 = {name: "Sweden", foul: 10, cardY: 2, cardR: 1};
+console.log(bestTeam(obj1, obj2));
 
 
