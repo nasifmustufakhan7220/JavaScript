@@ -1279,7 +1279,38 @@ const bestTeam = (player1, player2) => {
 }
 
 const obj1 = {name: "Germany", foul: 10, cardY: 1, cardR: 1};
-const obj2 = {name: "Sweden", foul: 10, cardY: 2, cardR: 1};
-console.log(bestTeam(obj1, obj2));
+const obj2 = { name: "Sweden", foul: 10, cardY: 2, cardR: 1 };
+
+
+
+const isSame = (arr1, arr2) => {
+    
+    if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+        return "Invalid";
+    }
+    if (arr1.length !== arr2.length) { 
+        return false;
+    }
+
+    // let index = 0;
+    // for (const value of arr1) {
+    //     if (value !== arr2[index]) {
+    //         return false;
+    //     }
+    //     index++;
+    // }
+
+    for (let i = 0; i < arr1.length; i++){
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+    
+}
+
+const sameArr1 = [1, undefined, 3];
+const sameArr2 = [1, null, 3];
+console.log(isSame(sameArr1, sameArr2));
 
 
