@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="main-container">
         <header>
             <h1 id="wel">Welcome to my DOM</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis temporibus magni expedita
@@ -27,7 +27,9 @@
         </section>
         <section class="fruits-container">
             <h1 id="fruits-title">Favourite Food</h1>
+            <p>Lorem ipsum dolor <span>someTxt</span> amet consectetur adipisicing elit. Debitis, libero?</p>
             <ul>
+                <li><span>Mango</span></li>
                 <li>Apple</li>
                 <li>Banana</li>
                 <li>Carrot</li>
@@ -45,14 +47,18 @@
             </ul>
         </section>
 
-        <section>
-            <h1>Buttons</h1>
-            <p id="para">Some Text here</p>
-            <button id="blue">blue</button>
-            <button id="red">red</button>
+        <section id="players-container" class="players-info">
+            <h1>Players</h1>
+            <ul id="player-list">
+                <li>Sakib</li>
+                <li>Musfiq</li>
+                <li>Ali</li>
+                <li>Mark</li>
+            </ul>
         </section>
     </main>
     <script src="DOM/script.js"></script>
+    <script src="DOM/append.js"></script>
 </body>
 
 </html>

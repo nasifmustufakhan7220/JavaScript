@@ -11,3 +11,25 @@
 .color {
     color: brown;
 }
+
+.textFont {
+    font-size: 20px;
+}
+
+.bg {
+    background-color: yellow;
+    text-align: center;
+    border: 5px solid purple;
+}
+
+.txt {
+    text-decoration: none;
+    list-style: none;
+}
+
+.listAll {
+    font-size: large;
+}
+.uppCase{
+    text-transform: uppercase;
+}
