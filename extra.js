@@ -1311,6 +1311,32 @@ const isSame = (arr1, arr2) => {
 
 const sameArr1 = [1, undefined, 3];
 const sameArr2 = [1, null, 3];
-console.log(isSame(sameArr1, sameArr2));
+
+
+
+
+const resultReport = (arrNumbers) => {
+    if (!Array.isArray(arrNumbers)) {
+        return "Invalid";
+    }
+    let pass = 0;
+    let fail = 0;
+    let finalScore;
+    let sum = 0;
+    for (const num of arrNumbers) {
+        if (num >= 40) {
+            pass++;
+        }
+        else {
+            fail++;
+        }
+        sum += num;
+    }
+    finalScore = Math.round(sum / arrNumbers.length);
+    return `{finalScore: ${finalScore}, pass: ${pass}, fail: ${fail}}`;
+}
+
+const numArr = 100;
+console.log(resultReport(numArr));
 
 
