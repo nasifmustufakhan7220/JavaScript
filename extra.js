@@ -1337,6 +1337,35 @@ const resultReport = (arrNumbers) => {
 }
 
 const numArr = 100;
-console.log(resultReport(numArr));
 
 
+
+var area = 100;
+var result = area / 2;
+
+
+
+var money = 9999;
+
+if (money >= 25000) {
+    console.log("Leptop");
+}
+else if (money >= 10000) {
+    console.log("Cycle");
+}
+else {
+    console.log("Chocolate");
+}
+
+
+
+var lastDay = 11;
+
+for (let i = 1; i <= lastDay; i++){
+    if (i % 3 === 0) {
+        console.log(i + "- medicine")
+    }
+    else {
+        console.log(i + "- rest")
+    }
+}
