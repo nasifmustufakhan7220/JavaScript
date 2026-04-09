@@ -1339,33 +1339,69 @@ const resultReport = (arrNumbers) => {
 const numArr = 100;
 
 
+const calculateDiscount = (price) => {
+    let result;
+    if (typeof price !== "number" || price < 0) {
+        return "Invalid";
+    }
+    else if (price >= 1000) {
+        let discount = price * 0.20;
+        result = price - discount;
+    }
+    else if (price >= 500) {
+        let discount = price * 0.10;
+        result = price - discount;
+    }
+    else {
+        result = price;
+    }
+    return result;
+}
+
+const priceD = 500;
+console.log(calculateDiscount(priceD));
+
+
+
+
+
 
 var area = 100;
 var result = area / 2;
 
 
 
-var money = 9999;
+// var money = 9999;
 
-if (money >= 25000) {
-    console.log("Leptop");
-}
-else if (money >= 10000) {
-    console.log("Cycle");
-}
-else {
-    console.log("Chocolate");
-}
+// if (money >= 25000) {
+//     console.log("Leptop");
+// }
+// else if (money >= 10000) {
+//     console.log("Cycle");
+// }
+// else {
+//     console.log("Chocolate");
+// }
 
 
 
-var lastDay = 11;
+// var lastDay = 11;
 
-for (let i = 1; i <= lastDay; i++){
-    if (i % 3 === 0) {
-        console.log(i + "- medicine")
-    }
-    else {
-        console.log(i + "- rest")
-    }
-}
+// for (let i = 1; i <= lastDay; i++){
+//     if (i % 3 === 0) {
+//         console.log(i + "- medicine")
+//     }
+//     else {
+//         console.log(i + "- rest")
+//     }
+// }
+
+
+// var fileName = "#exp.mp4";
+
+    // if (fileName.startsWith("#") || fileName.endsWith(".pdf") || fileName.endsWith(".docx")) {
+    //     console.log("Store");
+    // }
+    // else {
+    //     console.log("Delete");
+    // }
