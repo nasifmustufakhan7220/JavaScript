@@ -1359,7 +1359,90 @@ const calculateDiscount = (price) => {
 }
 
 const priceD = 500;
-console.log(calculateDiscount(priceD));
+
+
+
+
+const countVowels = (str) => {
+    if (typeof str !== "string") {
+        return "Invalid";
+    }
+
+    let vowels = "aeiouAEIOU";
+
+    let count = 0;
+
+    for (const char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+let inputString = "bAngladesh";
+
+
+
+const reverseWords = (str) => {
+    if (typeof str !== "string") {
+        return "Invalid";
+    }
+    // let result="";
+    // for (const char of str) {
+    //     result = char + result;
+    // }
+    // return result;
+
+    let words = str.split(" ");
+    let result = [];
+    
+    for (const word of words) {
+        let reversed = "";
+
+        for (const char of word) {
+            reversed = char + reversed;
+        }
+        result.push(reversed);
+    }
+    return result.join(" ");
+}
+
+const sen = "Hello world";
+
+
+const maxNumber = (numbers) => {
+    if (typeof number !== "number") {
+        return "Invalid";
+    }
+    let max = -Infinity;
+    for (const number of numbers) {
+        if (number > max) {
+            max = number;
+        }
+    }
+    return max;
+}
+
+
+
+
+const minNumber = (numbers) => {
+    if (typeof number !== "number") {
+        return "Invalid";
+    }
+
+    let min = numbers[0];
+
+    for (const number of numbers) {
+        if (min > number) {
+            min = number;
+        }
+    }
+    return min;
+}
+const numberArr = [10, 5, 3];
+console.log(minNumber(numberArr));
 
 
 
