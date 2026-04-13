@@ -1412,7 +1412,7 @@ const sen = "Hello world";
 
 
 const maxNumber = (numbers) => {
-    if (typeof number !== "number") {
+    if (!Array.isArray(number)) {
         return "Invalid";
     }
     let max = -Infinity;
@@ -1428,7 +1428,7 @@ const maxNumber = (numbers) => {
 
 
 const minNumber = (numbers) => {
-    if (typeof number !== "number") {
+    if (!Array.isArray(number)) {
         return "Invalid";
     }
 
@@ -1441,8 +1441,49 @@ const minNumber = (numbers) => {
     }
     return min;
 }
+
+
+
+const evenOddCount = (arrs) => {
+    if (!Array.isArray(arrs)) {
+        return "Invalid";
+    }
+    let even = 0;
+    let odd = 0;
+    for (const arr of arrs) {
+        if (arr % 2 === 0) {
+            even++;
+        }
+        else {
+            odd++;
+        }
+    }
+    let result = `{even: ${even}, odd: ${odd}}`;
+    return result;
+}
+
 const numberArr = [10, 5, 3];
-console.log(minNumber(numberArr));
+
+
+const removeDuplicates = (arrs) => {
+    let isDuplicate = false;
+    let newArr = [];
+    for (const value of arrs) {
+        if (!newArr.includes(value)) {
+            newArr.push(value);
+        }
+        else {
+            continue;
+        }
+    }
+    console.log(newArr);
+    
+}
+
+const Arr = [1, 2, 2, 3, 4, 4];
+
+
+console.log(removeDuplicates(Arr));
 
 
 
