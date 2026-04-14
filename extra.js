@@ -135,23 +135,23 @@
 
 
 
-// const login = (num, limit, compare) => {
-//     let i = num;
-//     let x;
-//     while (i < limit) {
-//     let login = Number(prompt("Enter your password: "));
-//     if (login === compare) {
-//         x = ("You are successfully login");
-//         break;
-//     };
-//     i++;
-//     }
-//     if (typeof x !== typeof undefined) {
-//         return x
-//     } else {
-//         return `You are kicked out`
-//     }
-// }
+const login = (num, limit, compare) => {
+    let i = num;
+    let x;
+    while (i < limit) {
+    let login = Number(prompt("Enter your password: "));
+    if (login === compare) {
+        x = ("You are successfully login");
+        break;
+    };
+    i++;
+    }
+    if (typeof x !== typeof undefined) {
+        return x
+    } else {
+        return `You are kicked out`
+    }
+}
 
 // console.log(login(0, 3, 1234));
 
@@ -1483,7 +1483,65 @@ const removeDuplicates = (arrs) => {
 const Arr = [1, 2, 2, 3, 4, 4];
 
 
-console.log(removeDuplicates(Arr));
+
+const generateUserName = (nameStr) => {
+    if (typeof nameStr !== "string") {
+        return "Invalid";
+    }
+
+    if (nameStr.includes(" ")) {
+        let result = nameStr.replace(/\s/g, '').toLowerCase();
+        return result;
+    }
+
+}
+
+const fullName = "Shah Srabon";
+
+const formatEmail = (emails) => {
+    if (typeof emails !== "string") {
+        return "Invalid";
+    }
+
+    let regex = /^.+@gmail.+$/;
+    let spaceRemoved = "";
+    if (emails.includes(" ")) {
+       spaceRemoved = generateUserName(emails);
+    }
+    if (spaceRemoved.endsWith('.com')) {
+        if (regex.test(spaceRemoved)) {
+            return spaceRemoved;
+        }
+        else {
+            return "Invalid emails";
+        }
+    }
+    
+}
+
+const emailId = "   NasifmUstufaK Han98@gmaiL.com ";
+
+
+
+
+const evenAverage = (numbers) => {
+    if (!Array.isArray(numbers)) {
+        return "Invalid";
+    }
+    let sum = 0;
+    let avg;
+    for (const number of numbers) {
+        if (number % 2 === 0) {
+            sum += number;
+        }
+    }
+
+    avg = Math.round(sum / numbers.length);
+    return avg;
+}
+
+const arrNum = "hello";
+console.log(evenAverage(arrNum));
 
 
 
