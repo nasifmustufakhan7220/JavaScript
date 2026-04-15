@@ -618,10 +618,6 @@ const vowelCount = (str) => {
     return count;
 }
 
-const longestWord = (str) => {
-    
-}
-
 // obboshoi ek ekta word er length onujaye kontate beshi length oi unujaye ber korbo.
 
 
@@ -1541,49 +1537,21 @@ const evenAverage = (numbers) => {
 }
 
 const arrNum = "hello";
-console.log(evenAverage(arrNum));
 
 
+const longestWord = (str) => {
+    if (typeof str !== "string") {
+        return "Invalid";
+    }
 
-
-
-
-var area = 100;
-var result = area / 2;
-
-
-
-// var money = 9999;
-
-// if (money >= 25000) {
-//     console.log("Leptop");
-// }
-// else if (money >= 10000) {
-//     console.log("Cycle");
-// }
-// else {
-//     console.log("Chocolate");
-// }
-
-
-
-// var lastDay = 11;
-
-// for (let i = 1; i <= lastDay; i++){
-//     if (i % 3 === 0) {
-//         console.log(i + "- medicine")
-//     }
-//     else {
-//         console.log(i + "- rest")
-//     }
-// }
-
-
-// var fileName = "#exp.mp4";
-
-    // if (fileName.startsWith("#") || fileName.endsWith(".pdf") || fileName.endsWith(".docx")) {
-    //     console.log("Store");
-    // }
-    // else {
-    //     console.log("Delete");
-    // }
+    const strSplits = str.split(' ');
+    let highestLength = strSplits[0];
+    for (const str of strSplits) {
+        if (str.length > highestLength.length) {
+            highestLength = str;
+        }
+    }
+    return highestLength;
+}
+const strCount = "I love JavaScript Programming nasifmustuf";
+console.log(longestWord(strCount));
