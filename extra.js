@@ -1554,4 +1554,45 @@ const longestWord = (str) => {
     return highestLength;
 }
 const strCount = "I love JavaScript Programming nasifmustuf";
-console.log(longestWord(strCount));
+
+
+const countPosNeg = (arrs) => {
+    if(!Array.isArray(arrs)){
+        return "Invalid";
+    }
+    let positiveNumberCounter = 0;
+    let negativeNumberCounter = 0;
+
+    for(const arr of arrs){
+        if(arr > 0){
+            positiveNumberCounter++;
+        }
+        else if(arr < 0){
+            negativeNumberCounter++;
+        }
+    }
+
+    return `{positive: ${positiveNumberCounter}, negative: ${negativeNumberCounter}}`;
+}
+
+const posNegNum = [1, -2, 3, -4, 0];
+
+
+
+const repeatString = (str,num) =>{
+    if(typeof str !== "string" || typeof num !== "number" || num < 0){
+        return "Invalid";
+    }
+    let emptyString = "";
+    for(let i = 0; i < num; i++){
+        emptyString += str;
+    }
+    return emptyString;
+}
+
+const value1 = "hi";
+// for(let i = 0; i < value1.length; i++){
+//     console.log(value1);
+// }
+const value2 =  3;
+console.log(repeatString(value1,value2));
