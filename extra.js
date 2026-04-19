@@ -1594,5 +1594,49 @@ const value1 = "hi";
 // for(let i = 0; i < value1.length; i++){
 //     console.log(value1);
 // }
-const value2 =  3;
-console.log(repeatString(value1,value2));
+const value2 = 3;
+
+
+
+const cleanUserName = (str) => {
+    if (typeof str !== "string") {
+        return "Invalid";
+    }
+
+    let cleaned = str.replaceAll(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    return cleaned;
+}
+
+
+const totalEvenFine = (arr) => {
+    if (!Array.isArray(arr)) {
+        return "Invalid";
+    }
+    let evenFineSum = 0;
+    for (const ar of arr) {
+        if (ar % 2 === 0) {
+            let fine = ar * 0.10;
+            let total = ar + fine;
+            evenFineSum += total
+        }
+    }
+    return evenFineSum;
+}
+const evenFine = [100, 155, 200];
+
+
+const divideArray = (arr, diviser) => {
+    if (!Array.isArray(arr) || diviser <= 0) {
+        return "Invalid";
+    }
+    let newArr = [];
+    for (const value of arr) {
+        let divided = value / diviser;
+        newArr.push(divided);
+    }
+    return newArr;
+}
+
+const dividedArr = [10, 20, 30];
+const divisor = 0;
+console.log(divideArray(dividedArr, divisor));
