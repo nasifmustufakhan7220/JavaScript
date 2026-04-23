@@ -1639,4 +1639,9 @@ const divideArray = (arr, diviser) => {
 
 const dividedArr = [10, 20, 30];
 const divisor = 0;
-console.log(divideArray(dividedArr, divisor));
+
+
+// spread operator means that, value gulu ke bichaiya dewa. 
+let str1 = "Nasif Khan";
+let str2 = [...str1, 1,2];
+console.log(str1,str2);
