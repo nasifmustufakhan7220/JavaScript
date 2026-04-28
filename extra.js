@@ -1,3 +1,5 @@
+"use strict"
+
 // let price = 1000;
 // const isLeader = true;
 
@@ -176,7 +178,7 @@ const capital = "Dhaka";
 
 
 
-capital[0] = 'F';
+// capital[0] = 'F';
 //console.log(capital); // ^ Dhaka ====> It is the original string's elements after chnaging.
 
 
@@ -1644,4 +1646,60 @@ const divisor = 0;
 // spread operator means that, value gulu ke bichaiya dewa. 
 let str1 = "Nasif Khan";
 let str2 = [...str1, 1,2];
-console.log(str1,str2);
+// console.log(str1,str2);
+
+
+
+const numS = [1, 2, 3, 4, 5];
+
+const doubled = numS.map((x) => {
+    const result = x * 2;
+    return result;
+});
+
+
+
+const numStr = [1, 2, 3, 4, 5];
+
+const covertStr = numStr.map((x) => {
+    const result = x.toString();
+    return result;
+})
+
+
+const name = ["Nasif", "John", "Sara"];
+
+const sayHello = name.map(name => `Hello ${name}`);
+
+const words = ["apple", "banana", "kiwi"];
+
+const wordLength = words.map(x => x.length);
+
+const fruits = ["apple", "mango", "banana"];
+
+const fruitsUpper = fruits.map(x => x.toUpperCase());
+
+const itemS = ["pen", "book", "eraser"];
+
+const itemIndex = itemS.map((value, index) =>{
+    const result = `${index} : ${value}`;
+    return result;
+})
+
+
+const users = [
+  { name: "Nasif", age: 20 },
+  { name: "John", age: 25 },
+  { name: "Sara", age: 22 }
+];
+
+const userNames = users.map(x => x.name);
+
+
+const products = [
+  { name: "Phone", price: 100 },
+  { name: "Laptop", price: 1000 }
+];
+
+const productsAdd = pro
+console.log(userNames);
