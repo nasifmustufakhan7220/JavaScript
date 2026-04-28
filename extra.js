@@ -1694,12 +1694,32 @@ const users = [
 ];
 
 const userNames = users.map(x => x.name);
+const formatUser = users.map(x => `${x.name} is ${x.age} years old`);
 
 
-const products = [
+const productS = [
   { name: "Phone", price: 100 },
   { name: "Laptop", price: 1000 }
 ];
+// for(const value of productS){
+//     value.tax = 100;
+// }
+// console.log(productS);
+const productsAdd = productS.map((x)=>{
+    let result = x.priceWithTax = x.price + (x.price*0.10);
+    return result;
+});
 
-const productsAdd = pro
-console.log(userNames);
+const email = [
+  "nasif@gmail.com",
+  "john@yahoo.com",
+  "sara@outlook.com"
+];
+
+const emailExtract = email.map((x)=>{
+    let str = x.split("@");
+    return str[1];
+})
+
+console.log(emailExtract);
+
