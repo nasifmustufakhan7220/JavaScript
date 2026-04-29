@@ -1705,10 +1705,10 @@ const productS = [
 //     value.tax = 100;
 // }
 // console.log(productS);
-const productsAdd = productS.map((x)=>{
-    let result = x.priceWithTax = x.price + (x.price*0.10);
-    return result;
-});
+const productsAdd = productS.map(x => ({
+    ...x,
+    priceWithTax: x.price * 1.10
+}));
 
 const email = [
   "nasif@gmail.com",
@@ -1719,7 +1719,54 @@ const email = [
 const emailExtract = email.map((x)=>{
     let str = x.split("@");
     return str[1];
+});
+
+const priceS = [100, 250, 75];
+
+const priceConvert = priceS.map((x) =>{
+    const result = `$${x}`;
+    return result;
+});
+
+
+const numberS = [1, 2, 3, 4];
+
+const bolleanCheck = numberS.map((x)=>{
+    if(x % 2 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 })
 
-console.log(emailExtract);
+const numSN = [-2, 3, -1, 5];
+
+const squarePositive = numSN.map((x)=>{
+    if(x > 0){
+        return x * x;
+    }
+    else{
+        return 0;
+    }
+})
+
+
+
+const usersNames = [
+  { name: "Nasif", age: 20 },
+  { name: "John", age: 25 },
+  { name: "Sara", age: 22 }
+];
+
+
+const findAdultYoung = usersNames.map((x)=>{
+    if(x.age >= 22){
+        return `Adult: ${x.name}`
+    }
+    else{
+        return `Young: ${x.name}`;
+    }
+})
+console.log(findAdultYoung);
 
