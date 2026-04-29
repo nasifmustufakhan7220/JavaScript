@@ -1768,5 +1768,15 @@ const findAdultYoung = usersNames.map((x)=>{
         return `Young: ${x.name}`;
     }
 })
-console.log(findAdultYoung);
+
+
+const arr12 = [1, 2, 3];
+let newARRS = [...arr12];
+const result = newARRS.map((x) => {
+    
+    let final = x * 2;
+    return final;
+});
+
+console.log(result);
 
