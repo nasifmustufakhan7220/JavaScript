@@ -1771,12 +1771,17 @@ const findAdultYoung = usersNames.map((x)=>{
 
 
 const arr12 = [1, 2, 3];
-let newARRS = [...arr12];
-const result = newARRS.map((x) => {
-    
-    let final = x * 2;
-    return final;
+const Results = arr12.map((x) => {
+    arr12.push(x);
+    return x * 2;
 });
+// console.log(arr12);
+// console.log(Results);
 
+const data = [{ value: 1 }, { value: 2 }];
+
+const result = data.map(item => {
+    return item.value * 2;
+})
+console.log(data);
 console.log(result);
-
