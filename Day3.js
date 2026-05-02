@@ -1,11 +1,16 @@
-let arr = [5, 15, 8];
+let arr = [3, 7, 2, 9];
 let arr1 = ["a", "b", "c", "d"];
+let arr3 = [10, 20, 30];
 let people = [
   {name: "A", age: 20},
   {name: "B", age: 20},
   {name: "C", age: 25}
 ];
 
+const sum = arr3.reduce((acc, curr)=>{
+    return acc+curr;
+}, 0)
+// console.log(sum);
 const findedMax = arr.reduce((acc, curr) =>{
     return (acc < curr) ? curr : acc;
 }, 0)
@@ -25,4 +30,15 @@ const groupByAge = people.reduce((acc,curr) => {
     return acc;
 }, {})
 
-console.log(groupByAge);
+let arr2 = [1, 2, 2, 3, 3, 3, 3, 2];
+const countFrequency = arr2.reduce((acc, curr) =>{ 
+
+    if(acc[curr]){
+        acc[curr] ++;
+    }else{
+        acc[curr] = 1;
+    }
+    return acc;
+}, )
+
+console.log(countFrequency);
