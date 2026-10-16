@@ -51,7 +51,7 @@ function isValidEmail(email) {
   return regex.test(email);
 }
 
-console.log(isValidEmail("user@a.com"));
+// console.log(isValidEmail("user@a.com"));
 
 
 
@@ -69,19 +69,18 @@ function gcd(a, b) {
         return a;
     }
     
-
-    let x = a;
-    let y = b;
+    let reminder = a % b;
 
     a = b;
-    b = x % b;
+    b = reminder;
 
     while(b > 0){
-        a = y;
-        b = b
+        reminder = a % b;
+        a = b;
+        b = reminder
     }
-    
+    return a;
 }
 
 
-console.log(gcd(12,18));
+// console.log(gcd(12,18));
