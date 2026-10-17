@@ -105,3 +105,23 @@ function longestIncreasingStreak(nums) {
 }
 
 // console.log(longestIncreasingStreak([1,2,3,1,2]));
+
+function chunkArray(arr, size) {
+    let newArr = [];
+    let i = 0;
+    while(i < arr.length){
+        newArr.push(arr.slice(i, i+size));
+        i+=size;
+    }
+  return newArr;
+}
+
+// console.log(chunkArray([1, 2, 3, 4, 5], 2));
+
+
+function isValidBdMobileNumber(phoneNumber) {
+    const regex = /^01[3-9][0-9]{8}$|^\+8801[3-9][0-9]{8}$|^8801[3-9][0-9]{8}$/
+    return regex.test(phoneNumber);
+}
+
+console.log(isValidBdMobileNumber("88017123456780"));
