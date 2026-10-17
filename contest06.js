@@ -124,4 +124,21 @@ function isValidBdMobileNumber(phoneNumber) {
     return regex.test(phoneNumber);
 }
 
-console.log(isValidBdMobileNumber("88017123456780"));
+// console.log(isValidBdMobileNumber("88017123456780"));
+
+
+function daysBetweenDates(date1, date2) {
+  const [year1, month1, day1] = date1.split("-").map(Number);
+  const [year2, month2, day2] = date2.split('-').map(Number);
+
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  const time1 = Date.UTC(year1, month1 - 1, day1);
+  const time2 = Date.UTC(year2, month2 - 1, day2);
+
+  const days = Math.abs(time1-time2)/oneDay;
+
+  return days;
+}
+
+// console.log(daysBetweenDates("2020-01-15", "2019-12-31"));
