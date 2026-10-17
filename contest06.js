@@ -53,34 +53,55 @@ function isValidEmail(email) {
 
 // console.log(isValidEmail("user@a.com"));
 
-
-
-
-
 function gcd(a, b) {
-    if(a === 0 && b === 0){
-        return 0;
-    }
-    if(a === 0){
-        return b;
-    }
+  if (a === 0 && b === 0) {
+    return 0;
+  }
+  if (a === 0) {
+    return b;
+  }
 
-    if(b === 0){
-        return a;
-    }
-    
-    let reminder = a % b;
+  if (b === 0) {
+    return a;
+  }
 
+  let reminder = a % b;
+
+  a = b;
+  b = reminder;
+
+  while (b > 0) {
+    reminder = a % b;
     a = b;
     b = reminder;
-
-    while(b > 0){
-        reminder = a % b;
-        a = b;
-        b = reminder
-    }
-    return a;
+  }
+  return a;
 }
 
-
 // console.log(gcd(12,18));
+
+function longestIncreasingStreak(nums) {
+  if (nums.length <= 0) {
+    return 0;
+  }
+
+  let currentStreak = 1;
+  let maximumStreak = 1;
+
+
+  for(let i = 1; i < nums.length; i++){
+    if(nums[i] > nums[i-1]){
+        currentStreak++;
+        if(currentStreak > maximumStreak){
+            maximumStreak = currentStreak;
+        }
+    }
+    else{
+        currentStreak = 1;
+    }
+  }
+
+  return maximumStreak;
+}
+
+// console.log(longestIncreasingStreak([1,2,3,1,2]));
