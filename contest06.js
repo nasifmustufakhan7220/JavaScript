@@ -142,3 +142,14 @@ function daysBetweenDates(date1, date2) {
 }
 
 // console.log(daysBetweenDates("2020-01-15", "2019-12-31"));
+
+
+function toQueryString(params) {
+  const arr = Object.entries(params);
+  const url = arr.map(([key, value])=>{
+    return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+  });
+  return url.join("&");
+}
+
+console.log(toQueryString({ search: "hello world", page: 1 }));
