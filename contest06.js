@@ -88,16 +88,14 @@ function longestIncreasingStreak(nums) {
   let currentStreak = 1;
   let maximumStreak = 1;
 
-
-  for(let i = 1; i < nums.length; i++){
-    if(nums[i] > nums[i-1]){
-        currentStreak++;
-        if(currentStreak > maximumStreak){
-            maximumStreak = currentStreak;
-        }
-    }
-    else{
-        currentStreak = 1;
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > nums[i - 1]) {
+      currentStreak++;
+      if (currentStreak > maximumStreak) {
+        maximumStreak = currentStreak;
+      }
+    } else {
+      currentStreak = 1;
     }
   }
 
@@ -107,49 +105,64 @@ function longestIncreasingStreak(nums) {
 // console.log(longestIncreasingStreak([1,2,3,1,2]));
 
 function chunkArray(arr, size) {
-    let newArr = [];
-    let i = 0;
-    while(i < arr.length){
-        newArr.push(arr.slice(i, i+size));
-        i+=size;
-    }
+  let newArr = [];
+  let i = 0;
+  while (i < arr.length) {
+    newArr.push(arr.slice(i, i + size));
+    i += size;
+  }
   return newArr;
 }
 
 // console.log(chunkArray([1, 2, 3, 4, 5], 2));
 
-
 function isValidBdMobileNumber(phoneNumber) {
-    const regex = /^01[3-9][0-9]{8}$|^\+8801[3-9][0-9]{8}$|^8801[3-9][0-9]{8}$/
-    return regex.test(phoneNumber);
+  const regex = /^01[3-9][0-9]{8}$|^\+8801[3-9][0-9]{8}$|^8801[3-9][0-9]{8}$/;
+  return regex.test(phoneNumber);
 }
 
 // console.log(isValidBdMobileNumber("88017123456780"));
 
-
 function daysBetweenDates(date1, date2) {
   const [year1, month1, day1] = date1.split("-").map(Number);
-  const [year2, month2, day2] = date2.split('-').map(Number);
+  const [year2, month2, day2] = date2.split("-").map(Number);
 
   const oneDay = 24 * 60 * 60 * 1000;
 
   const time1 = Date.UTC(year1, month1 - 1, day1);
   const time2 = Date.UTC(year2, month2 - 1, day2);
 
-  const days = Math.abs(time1-time2)/oneDay;
+  const days = Math.abs(time1 - time2) / oneDay;
 
   return days;
 }
 
 // console.log(daysBetweenDates("2020-01-15", "2019-12-31"));
 
-
 function toQueryString(params) {
   const arr = Object.entries(params);
-  const url = arr.map(([key, value])=>{
+  const url = arr.map(([key, value]) => {
     return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
   });
   return url.join("&");
 }
 
-console.log(toQueryString({ search: "hello world", page: 1 }));
+// console.log(toQueryString({ search: "hello world", page: 1 }));
+
+function diagonalSums(matrix) {
+    let main = 0;
+    let secondary = 0;
+    for(let i = 0; i < matrix.length; i++){
+        main+=matrix[i][i];
+        secondary+=matrix[i][matrix.length - 1 - i];
+    }
+
+    return {main, secondary}
+}
+
+console.log(
+  diagonalSums([
+  [1, 2],
+  [3, 4]
+])
+);
