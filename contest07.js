@@ -235,43 +235,65 @@ function reconcileInventory(initialInventory, transactions) {
 
 
 function countConnectedFriends(friendships, startPerson) {
+    // সব ব্যক্তির নাম এবং তাদের বন্ধুদের তালিকা রাখার জন্য একটি Map তৈরি করছি।
     let maps = new Map();
-    for(const friend of friendships){
-        // এখন destructuring ব্যবহার করে দুজনের নাম আলাদা করতে পারো:
+
+    // প্রতিটি friendship জোড়া ধরে ধরে লুপ চালাচ্ছি।
+    for (const friend of friendships) {
+
+        // destructuring ব্যবহার করে জোড়ার দুজন ব্যক্তির নাম আলাদা করছি।
         const [person1, person2] = friend;
 
-        //person1 mpas এর মধ্যে আছে কিনা টা চেক করছে এবং না থাকলে একটি empty array তৈরি করা হচ্ছে বন্ধুদের নাম স্টোর করার জন্য।
-        if(!maps.has(person1)){
+        // Map-এর মধ্যে person1 না থাকলে তার জন্য একটি খালি array তৈরি করছি।
+        if (!maps.has(person1)) {
             maps.set(person1, []);
         }
 
-        // যদি person1 ইতিমধ্যে আছে তাহলে তার বন্ধু person2 কে ঐ empty array তে রাখবো। 
+        // person1-এর বন্ধুদের তালিকায় person2-কে যোগ করছি।
         maps.get(person1).push(person2);
 
-
-        if(!maps.has(person2)){
+        // Map-এর মধ্যে person2 না থাকলে তার জন্য একটি খালি array তৈরি করছি।
+        if (!maps.has(person2)) {
             maps.set(person2, []);
         }
 
-        maps.get(person2).push(person1)
-        
+        // person2-এর বন্ধুদের তালিকায় person1-কে যোগ করছি।
+        // কারণ friendship একতরফা নয়, দুজনই দুজনের বন্ধু।
+        maps.get(person2).push(person1);
     }
 
+    // যাদের ইতিমধ্যে খুঁজে পেয়েছি, তাদের নাম রাখার জন্য একটি Set তৈরি করছি।
     let visited = new Set();
+
+    // শুরুতে যে ব্যক্তির network খুঁজব, তাকে queue-এর মধ্যে রাখছি।
     let queue = [startPerson];
-    
+
+    // শুরু করার ব্যক্তিকে visited Set-এর মধ্যে যোগ করছি।
     visited.add(startPerson);
 
-    while(queue.length > 0){
+    // queue-এর মধ্যে যতক্ষণ ব্যক্তি থাকবে, ততক্ষণ লুপ চলবে।
+    while (queue.length > 0) {
+
+        // queue-এর প্রথম ব্যক্তিকে বের করে currentPerson-এ রাখছি।
         const currentPerson = queue.shift();
-        for(const c of maps.get(currentPerson) ?? []){
-            if(!visited.has(c)){
+
+        // currentPerson-এর বন্ধুদের তালিকা থেকে একে একে বন্ধুদের নিচ্ছি।
+        // এই ব্যক্তির কোনো বন্ধু না থাকলে খালি array ব্যবহার করছি।
+        for (const c of maps.get(currentPerson) ?? []) {
+
+            // বন্ধুটি আগে visited Set-এর মধ্যে আছে কি না, তা পরীক্ষা করছি।
+            if (!visited.has(c)) {
+
+                // বন্ধুটিকে প্রথমবার খুঁজে পেলে visited Set-এ যোগ করছি।
                 visited.add(c);
-                queue.push(c)
+
+                // বন্ধুটিকে queue-তে যোগ করছি, যাতে তার বন্ধুদেরও খুঁজতে পারি।
+                queue.push(c);
             }
         }
     }
 
+    // visited Set-এ থাকা মোট unique ব্যক্তির সংখ্যা return করছি।
     return visited.size;
 }
 
